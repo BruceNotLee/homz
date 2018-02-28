@@ -50,3 +50,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Added at 2018-02-28 09:34:51 -0500 by matt:
+gem "paperclip", "~> 5.2"
+
+# Added at 2018-02-28 10:19:41 -0500 by matt:
+gem "aws-sdk", "< 3.0"
+
+# Added at 2018-02-28 10:20:16 -0500 by matt:
+gem "dotenv", "~> 2.2"
