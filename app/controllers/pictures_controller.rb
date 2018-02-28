@@ -15,7 +15,6 @@ class PicturesController < ApplicationController
     vision = Google::Cloud::Vision.new project: project_id
     file_name = @picture.attachment.url.prepend("https:").split('?')[0]
     @labels = vision.image(file_name).labels
-
   end
 
   # GET /pictures/new
