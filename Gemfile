@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
@@ -50,3 +51,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Added at 2018-02-28 09:34:51 -0500 by matt:
+gem "paperclip", "~> 5.2"
+
+# Added at 2018-02-28 10:19:41 -0500 by matt:
+gem "aws-sdk", "< 3.0"
+
+# Added at 2018-02-28 15:11:18 -0500 by matt:
+gem "google-cloud-vision", "~> 0.28.0"

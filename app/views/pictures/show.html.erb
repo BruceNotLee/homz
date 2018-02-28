@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @picture.location %>
+</p>
+
+<p>
+  Picture:
+  <%= image_tag @picture.attachment.url, size:'200x200' %>
+</p>
+
+<p>
+<%= @labels.each do |l| %>
+  <%= l %> <br>
+<% end %>
+</p>
+
+<%= link_to 'Edit', edit_picture_path(@picture) %> |
+<%= link_to 'Back', pictures_path %>
