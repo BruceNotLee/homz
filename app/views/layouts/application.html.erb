@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html class="flow-text">
   <head>
     <title>HomzDirect</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <%= render "nav" %>
+    </header>
+    <main class="container">
+      <%= yield %>
+    </main>
+    <footer class="page-footer card-panel blue darken-4 white-text center">
+      <%= render "footer" %>
+    </footer>
   </body>
 </html>
