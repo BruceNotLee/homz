@@ -10,11 +10,7 @@ class PicturesController < ApplicationController
   # GET /pictures/1
   # GET /pictures/1.json
   def show
-    require "google/cloud/vision"
-    project_id = "homz-direct"
-    vision = Google::Cloud::Vision.new project: project_id
-    file_name = @picture.attachment.url.prepend("https:").split('?')[0]
-    @labels = vision.image(file_name).labels
+    @labels = JSON.parse(@picture.raw_json)
   end
 
   # GET /pictures/new
@@ -31,8 +27,24 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params)
 
+
     respond_to do |format|
       if @picture.save
+        require "google/cloud/vision"
+        project_id = "homz-direct"
+        vision = Google::Cloud::Vision.new project: project_id
+        file_name = @picture.attachment.url.prepend("https:").split('?')[0]
+        labels = vision.image(file_name).labels
+        @picture.raw_json = labels.to_json
+
+        labels.each do |label|
+          if label.score > 0.80
+            PictureTag.create(tag_name: label.description, rating: label.score, picture_id: @picture.id)
+          end
+        end
+
+        @picture.save
+
         format.html { redirect_to @picture, notice: 'Picture was successfully created.' }
         # format.json { render :show, status: :created, location: @picture }
       else
