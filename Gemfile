@@ -70,3 +70,9 @@ gem "google-cloud-vision", "~> 0.28.0"
 
 # Added at 2018-02-28 20:05:48 -0500 by matt:
 gem "pry-rails", "~> 0.3.6"
+
+# Added at 2018-03-01 18:15:11 -0500 by matt:
+gem "redis", "~> 4.0"
+
+# Added at 2018-03-01 19:58:03 -0500 by matt:
+gem "jquery-rails", "~> 4.3"

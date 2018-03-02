@@ -58,3 +58,11 @@ main {
 footer.page-footer {
   margin-bottom: 0px;
 }
+
+#messages {
+  max-height: 450px;
+  overflow-y: auto;
+  .avatar {
+    margin: 0.5rem;
+  }
+}

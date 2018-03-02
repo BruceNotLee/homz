@@ -11,4 +11,11 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
     end
   end
+
+  def name
+    email.split('@')[0]
+  end
+
+  has_many :chat_rooms, dependent: :destroy
+  has_many :messages, dependent: :destroy
 end
