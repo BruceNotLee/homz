@@ -1,49 +1,25 @@
-@charset "UTF-8";
 /*
-*= require material_icons
-*/
-// Color
-@import "materialize/components/color-variables";
-@import "materialize/components/color-classes";
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
 
-// Variables;
-@import "materialize/components/variables";
+ @import "materialize";
+ @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+ @import "pages.scss";
+ @import "pictures.scss";
+ @import "fonts.scss";
 
-// Reset
-@import "materialize/components/normalize";
-
-// materialize/components
-@import "materialize/components/global";
-@import "materialize/components/badges";
-@import "materialize/components/icons-material-design";
-@import "materialize/components/grid";
-@import "materialize/components/navbar";
-@import "materialize/components/typography";
-@import "materialize/components/transitions";
-@import "materialize/components/cards";
-@import "materialize/components/toast";
-@import "materialize/components/tabs";
-@import "materialize/components/tooltip";
-@import "materialize/components/buttons";
-@import "materialize/components/dropdown";
-@import "materialize/components/waves";
-@import "materialize/components/modal";
-@import "materialize/components/collapsible";
-@import "materialize/components/chips";
-@import "materialize/components/materialbox";
-@import "materialize/components/forms/forms";
-@import "materialize/components/table_of_contents";
-@import "materialize/components/sidenav";
-@import "materialize/components/preloader";
-@import "materialize/components/slider";
-@import "materialize/components/carousel";
-@import "materialize/components/tapTarget";
-@import "materialize/components/pulse";
-@import "materialize/components/datepicker";
-@import "materialize/components/timepicker";
-
-@import "pages.scss";
-@import "fonts.scss";
 
 body {
   display: flex;
