@@ -51,8 +51,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-gem 'materialize-sass', '~> 1.0.0.alpha4'
-gem 'material_icons'
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -74,3 +73,7 @@ gem "redis", "~> 4.0"
 
 # Added at 2018-03-01 19:58:03 -0500 by matt:
 gem "jquery-rails", "~> 4.3"
+
+gem 'materialize-sass', '~> 1.0.0.alpha4'
+
+gem 'material_icons'

@@ -5,6 +5,7 @@
 
 html {
   font-family: "Somatic";
+  color: black;
 }
 
 // this is the login box
@@ -16,4 +17,13 @@ label {
 // icon on nav bar
 nav i.material-icons {
     font-size: 2rem;
+}
+
+.card .card-image .card-title {
+    color: black;
+    padding: 0px;
+}
+
+.sidenav li > a {
+  font-size: 1.5rem;
 }
