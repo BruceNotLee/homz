@@ -1,29 +1,54 @@
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li>
+    <!-- <a href="#!">one</a> -->
+    <button type="button" name="one"></button>
+  </li>
+  <li class="divider"></li>
+  <li>
+    <!-- <a href="#!">two</a> -->
+    <button type="button" name="two"></button>
+  </li>
+  <li class="divider"></li>
+  <li>
+    <!-- <a href="#!">three</a> -->
+    <button type="button" name="three"></button>
+  </li>
+</ul>
+<!-- Nav bar below -->
 <nav>
   <div class="nav-wrapper blue darken-4 white-text">
+    <!-- Left aligned -->
+    <ul class="left">
+      <li>
+        <div class="center row">
+          <div class="col s12 ">
+            <div class="row" id="topbarsearch">
+              <div class="input-field col s6 s12">
+                <i class="white-text material-icons prefix">search</i>
+                <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <!-- center aligned -->
     <a href="#!" class="brand-logo center">
       <%= image_tag 'homz_small_logo.png' %>
-    </i>HomzDirect</a>
-  <ul class="right">
-    <li>
-      <a href="#">
-        <i class="material-icons">search</i>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="material-icons">view_module</i>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="material-icons">refresh</i>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="material-icons">more_vert</i>
-      </a>
-    </li>
-  </ul>
+      <span class="hide-on-med-and-down">
+        HomzDirect
+      </span>
+    </a>
+    <!-- aligned right -->
+    <ul class="right">
+      <!-- Start Dropdown Trigger -->
+      <li>
+        <a class="dropdown-button" href="#!" data-activates="dropdown1">
+          <i class="material-icons">menu</i>
+        </a>
+      </li>
+      <!-- End Dropdown Trigger -->
+    </ul>
   </div>
 </nav>
