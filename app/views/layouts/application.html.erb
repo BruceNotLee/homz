@@ -13,6 +13,9 @@
   <body class="blue darken-4">
     <header>
       <%= render "nav" %>
+      <ul class="hmenu">
+        <%= render '/users/login_items' %>
+      </ul>
     </header>
     <main class="container">
       <%= yield %>
