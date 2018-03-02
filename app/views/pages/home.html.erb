@@ -1,3 +1,4 @@
+<%#= session.to_hash %>
 <% unless user_signed_in? %>
 <%= link_to 'Log in', new_user_session_url %><br>
 <% end %>

@@ -40,6 +40,7 @@ $( document ).on('turbolinks:load', function() {
        function (res, status) {
          var zip = res[0].formatted_address.match(/,\s\w{2}\s(\d{5})/);
          console.log(zip[1]);
+         window.location = '/feed?zip=' + zip[1];
        }
      );
    } else {
