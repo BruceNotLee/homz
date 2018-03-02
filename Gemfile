@@ -67,3 +67,6 @@ gem "aws-sdk", "< 3.0"
 
 # Added at 2018-02-28 15:11:18 -0500 by matt:
 gem "google-cloud-vision", "~> 0.28.0"
+
+# Added at 2018-02-28 20:05:48 -0500 by matt:
+gem "pry-rails", "~> 0.3.6"

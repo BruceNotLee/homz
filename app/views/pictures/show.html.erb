@@ -7,7 +7,7 @@
 
 <p>
   Picture:
-  <%= image_tag @picture.attachment.url, size:'200x200' %>
+  <%= image_tag @picture.attachment.url(:square) %>
 </p>
 
 <p>

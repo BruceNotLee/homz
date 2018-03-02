@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Somatic";
+  src: url("Somatic-Rounded.otf") unquote("format('opentype')");
+}
+
+html {
+  font-family: "Somatic";
+}
+
+// this is the login box
+label {
+  font-size: 0.9rem;
+  color: #9e9e9e;
+}

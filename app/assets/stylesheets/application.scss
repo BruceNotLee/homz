@@ -1,5 +1,7 @@
 @charset "UTF-8";
-
+/*
+*= require material_icons
+*/
 // Color
 @import "materialize/components/color-variables";
 @import "materialize/components/color-classes";
@@ -39,3 +41,20 @@
 @import "materialize/components/pulse";
 @import "materialize/components/datepicker";
 @import "materialize/components/timepicker";
+
+@import "pages.scss";
+@import "fonts.scss";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer.page-footer {
+  margin-bottom: 0px;
+}
