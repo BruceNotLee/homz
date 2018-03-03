@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   get 'message', to: 'pages#message'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  root to: 'pages#home'
+  root to: 'pages#landing'
 
   resources :chat_rooms, only: [:new, :create, :show, :index]
   mount ActionCable.server => '/cable'
+
 end
