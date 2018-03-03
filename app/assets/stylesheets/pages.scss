@@ -15,18 +15,30 @@
   padding-bottom: 0.5em;
 }
 
+.homebuttons {
+  text-align: center;
+  padding-top: 24em;
+}
+
+
+
 #location {
   &.disabled {
     opacity: 0.5;
     cursor: not-allowed;
   }
+  background-color: white;
+  color: #2a417d;
 }
 
 #loginbtn {
-  background-color: #2296f4;
+  color: #2a417d;
+  background-color: white;
   width: 15em;
 }
 
-#location {
-  background-color: #2296f4;
+#homepage {
+  background-image: url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg");
+  height: 100vh;
+  width: 100%;
 }

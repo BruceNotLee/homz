@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  layout "app_no_container"
+  layout :resolve_layout
 
   def home
   end
@@ -17,5 +17,17 @@ class PagesController < ApplicationController
 
   def landing
   end
+
+  private
+
+  def resolve_layout
+    case action_name
+    when "home"
+      "home_page_layout"
+    when "feed"
+      "app_no_container"
+    else
+      "application"
+    end
 
 end
