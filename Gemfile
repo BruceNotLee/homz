@@ -77,3 +77,6 @@ gem "jquery-rails", "~> 4.3"
 gem 'materialize-sass', '~> 1.0.0.alpha4'
 
 gem 'material_icons'
+
+# Added at 2018-03-03 13:06:26 -0500 by matt:
+gem "rails-erd", "~> 1.5", require: false, group: :development
