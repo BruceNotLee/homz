@@ -1,5 +1,17 @@
 <%#= session.to_hash %>
-<% unless user_signed_in? %>
-<%= link_to 'Log in', new_user_session_url %><br>
-<% end %>
-<p id="location"> <%= link_to "Use current location", feed_path %> </p>
+
+    <div class="logo">
+      <%= image_tag "logo.png", size: "200x200" %><br>
+      <h5 class="white-text">We're all about homz</h5>
+    </div>
+    <% unless user_signed_in? %>
+    <div class="homebuttons">
+      <div class="login">
+      <a id="loginbtn" class="waves-effect waves-light btn" href="/users/sign_in">Sign up/Log in</a><br>
+      </div>
+
+      <% end %>
+      <div class="loc">
+        <a id="location" class="waves-effect waves-light btn" href="/feed">Use Current Location</a>
+      </div>
+    </div>

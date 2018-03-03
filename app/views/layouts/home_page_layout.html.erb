@@ -16,18 +16,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="white">
-    <header>
-      <%= render "nav" %>
-      <ul class="hmenu">
-        <%= render '/users/login_items' %>
-      </ul>
-    </header>
+  <body id="homepage">
     <main class="container">
       <%= yield %>
     </main>
-    <footer class="page-footer card-panel blue white-text center">
-      <%= render "footer" %>
-    </footer>
   </body>
 </html>

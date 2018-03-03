@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'feed', to: 'pages#feed'
   get 'message', to: 'pages#message'
+  get 'home' => 'pages#home'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   root to: 'pages#landing'
