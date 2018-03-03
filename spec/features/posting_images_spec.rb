@@ -1,10 +1,8 @@
 require 'rails_helper'
 
 RSpec.feature "PostingImages", type: :feature do
-  pending "add some scenarios (or delete) #{__FILE__}"
+  pending "must be signed in"
+  pending "requires title"
+  pending "requires Location"
+  pending "poster can CRUD"
 end
-
-# must be signed in
-# requires title
-# requires Location
-# poster can CRUD

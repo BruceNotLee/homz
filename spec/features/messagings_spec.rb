@@ -1,12 +1,10 @@
 require 'rails_helper'
 
 RSpec.feature "Messagings", type: :feature do
-  pending "add some scenarios (or delete) #{__FILE__}"
+  pending 'must be signed in'
+  pending 'message a user'
+  pending 'message a property'
+  pending 'limit msg to 1 until reciever acknoledges'
+  pending 'reciever is alerted to new message'
+  pending 'message chatroom created and is persistant'
 end
-
-# must be signed in
-# message a user
-# message a property
-# limit msg to 1 until reciever acknoledges
-# reciever is alerted to new message
-# message chatroom created and is persistant

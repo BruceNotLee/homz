@@ -1,13 +1,11 @@
 require 'rails_helper'
 
 RSpec.feature "PostingProperties", type: :feature do
-  pending "add some scenarios (or delete) #{__FILE__}"
+  pending 'user must be signed in'
+  pending 'requires title'
+  pending 'requires location(zip?)'
+  pending 'requires cover images'
+  pending 'can accept additional images'
+  pending 'creates property index page'
+  pending 'property owner can CRUD'
 end
-
-# user must be signed in
-# requires title
-# requires location(zip?)
-# requires cover images
-# can accept additional images
-# creates property index page
-# property owner can CRUD

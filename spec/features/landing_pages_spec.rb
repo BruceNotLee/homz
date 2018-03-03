@@ -1,12 +1,10 @@
 require 'rails_helper'
 
 RSpec.feature "LandingPages", type: :feature do
-  pending "add some scenarios (or delete) #{__FILE__}"
+  pending 'play timed intro'
+  pending 'Get feed if user signed in'
+  pending 'Get welcome if user !signed in'
+  pending 'Show Register Button'
+  pending 'Show Sign In Button'
+  pending 'Show Use Current Location Button'
 end
-
-# play timed intro
-# Get feed if user signed in
-# Get welcome if user !signed in
-# Show Register Button
-# Show Sign In Button
-# Show Use Current Location Button
