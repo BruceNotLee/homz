@@ -16,8 +16,6 @@ class PagesController < ApplicationController
   end
 
   def landing
-    # sleep (2.0)
-    # redirect_to => "pages#home"
   end
 
 end
