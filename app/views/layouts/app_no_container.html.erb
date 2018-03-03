@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class="flow-text">
+  <head>
+    <title>HomzDirect</title>
+    <%= csrf_meta_tags %>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import Stylesheets -->
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Import Javascript -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="white">
+    <header>
+      <%= render "nav" %>
+      <ul class="hmenu">
+        <%= render '/users/login_items' %>
+      </ul>
+    </header>
+    <main class="">
+      <%= yield %>
+    </main>
+    <footer class="page-footer card-panel blue white-text center">
+      <%= render "footer" %>
+    </footer>
+  </body>
+</html>

@@ -1,6 +1,8 @@
+<div class="navbar-div">
+
 <nav class="nav-wrapper blue">
   <div class="center">
-    <a href="#!" class="brand-logo"><%= image_tag 'homz_small_logo.png' %></a>
+    <%= link_to image_tag('homz_small_logo.png'), feed_path, class:'brand-logo' %>
   </div>
   <div class="right">
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="right material-icons">account_circle</i></a>
@@ -22,3 +24,4 @@
   <li><a href="#">Upload</a></li>
   <li><a href="#">Messages</a></li>
 </ul>
+</div>
