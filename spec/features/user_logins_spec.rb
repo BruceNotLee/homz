@@ -9,5 +9,27 @@ RSpec.feature "User login", type: :feature do
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
   end
-  
+
 end
+
+
+# Register new user
+#   Manual
+#   Facebook
+# end
+#
+# User forgot Password
+#   confirm user by email/text
+#     Update password
+#   end
+# end
+#
+# sign out destroys session
+#
+# If signed in Show
+#   Sign out
+# else
+#   sign in
+#   Register
+#   forgot Password
+# end
