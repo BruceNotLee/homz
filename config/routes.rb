@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'comments/create'
+  resources :favorites, only: [:create,:destroy]
 
   resources :pictures
 
@@ -14,5 +15,8 @@ Rails.application.routes.draw do
   mount ActionCable.server => '/cable'
 
   resources :comments, only: [:new, :create]
+  post 'favorites/:id' => 'favorites#favorite'
+
+  delete 'unfavorite/:id' => 'favorites#unfavorite', as: 'unfavorite'
 
 end

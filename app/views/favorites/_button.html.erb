@@ -1,0 +1,13 @@
+<% if current_user.favorite?(picture) %>
+  <%= button_to unfavorite_path(id: picture.id), remote: true, method: :delete do %>
+  <a class="blue btn-floating halfway-fab btn-large z-depth-0">
+    <i class="material-icons red-text">favorite</i>
+  </a>
+  <%end%>
+<% else %>
+  <%= button_to  favorite_path(id: picture.id), remote: true do %>
+  <a class="blue btn-floating halfway-fab btn-large z-depth-0">
+    <i class="material-icons red-text">favorite_border</i>
+  </a>
+  <%end%>
+<% end %>
