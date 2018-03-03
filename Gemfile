@@ -77,3 +77,5 @@ gem "jquery-rails", "~> 4.3"
 gem 'materialize-sass', '~> 1.0.0.alpha4'
 
 gem 'material_icons'
+
+gem 'simplecov', require: false, group: :test
