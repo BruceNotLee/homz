@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  layout "app_no_container"
+
   def home
   end
 
@@ -6,7 +8,7 @@ class PagesController < ApplicationController
     session[:zip] = params[:zip] if params[:zip]
 
     @pictures = Picture.where(location: session[:zip])
-    rest_of_pics = Picture.all - @pictures
+    rest_of_pics = Picture.all.shuffle - @pictures
     @pictures += rest_of_pics
   end
 
