@@ -20,9 +20,4 @@
 .env
 Homz-Direct-ee92c22bb2c2.json
 homz-development-b5c2f6999a7b.json
-
-# Ignore the Mac liter
 .DS_Store
-
-# Ignore the testing coverage Folder
-/coverage
