@@ -1,11 +1,10 @@
 
-
-<%= image_tag "logo.png" %>
-<div class="text">
-  <p>BUY. SELL. SHARE. CONNECT</p>
+<div class="logo">
+  <%= image_tag "logo.png", size: "200x200" %><br>
+  <h5 class="white-text">BUY. SELL. SHARE. CONNECT.</h5>
 </div>
-<% if user_signed_in? === false %>
-<meta HTTP-EQUIV="REFRESH" content="2.5; /feed">
+<% if user_signed_in?%>
+<meta HTTP-EQUIV="REFRESH" content="3; /feed">
 <% else  %>
-<meta HTTP-EQUIV="REFRESH" content="2.5; /pages/home">
+<meta HTTP-EQUIV="REFRESH" content="3; /home">
 <% end  %>

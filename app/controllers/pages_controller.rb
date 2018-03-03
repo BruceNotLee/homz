@@ -22,12 +22,13 @@ class PagesController < ApplicationController
 
   def resolve_layout
     case action_name
-    when "home"
+    when "home", "landing"
       "home_page_layout"
     when "feed"
       "app_no_container"
     else
       "application"
     end
+  end
 
 end

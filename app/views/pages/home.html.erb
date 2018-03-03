@@ -1,7 +1,9 @@
 <%#= session.to_hash %>
 
-
-
+    <div class="logo">
+      <%= image_tag "logo.png", size: "200x200" %><br>
+      <h5 class="white-text">We're all about homz</h5>
+    </div>
     <% unless user_signed_in? %>
     <div class="homebuttons">
       <div class="login">
