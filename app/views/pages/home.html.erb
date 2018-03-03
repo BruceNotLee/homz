@@ -1,5 +1,13 @@
 <%#= session.to_hash %>
+
+
+
 <% unless user_signed_in? %>
-<%= link_to 'Log in', new_user_session_url %><br>
+<div class="login">
+<a id="loginbtn" class="waves-effect waves-light btn" href="/users/sign_in">Log in</a><br>
+</div>
+
 <% end %>
-<p id="location"> <%= link_to "Use current location", feed_path %> </p>
+<div class="loc">
+  <a id="location" class="waves-effect waves-light btn" href="/feed">Use Current Location</a>
+</div>
