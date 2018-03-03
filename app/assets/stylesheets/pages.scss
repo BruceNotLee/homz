@@ -3,9 +3,22 @@
   height: auto;
 }
 
+.login {
+  padding-bottom: 0.5em;
+}
+
 #location {
   &.disabled {
     opacity: 0.5;
     cursor: not-allowed;
   }
+}
+
+#loginbtn {
+  background-color: #2296f4;
+  width: 15em;
+}
+
+#location {
+  background-color: #2296f4;
 }
