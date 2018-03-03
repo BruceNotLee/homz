@@ -11,9 +11,39 @@
 
 //**************************************//
 
+.login {
+  padding-bottom: 0.5em;
+}
+
+.homebuttons {
+  text-align: center;
+  padding-top: 8em;
+}
+
+
+
 #location {
   &.disabled {
     opacity: 0.5;
     cursor: not-allowed;
   }
+  background-color: white;
+  color: #2a417d;
+}
+
+#loginbtn {
+  color: #2a417d;
+  background-color: white;
+  width: 15em;
+}
+
+#homepage {
+  background-image: url("milky_way.jpg");
+  height: 100vh;
+  width: 100%;
+}
+
+.logo {
+  text-align: center;
+  padding-top: 5em;
 }
