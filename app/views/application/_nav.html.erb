@@ -8,20 +8,25 @@
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="right material-icons">account_circle</i></a>
 
     <!-- Nav Bar menu, HIDES on small view -->
-    <ul class="right hide-on-med-and-down">
-      <li><a href="#">Account</a></li>
-      <li><a href="#">Properties</a></li>
-      <li><a href="#">Upload</a></li>
-      <li><a href="#">Messages</a></li>
-    </ul>
+    <div class="nav_menu">
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">My Favorites</a></li>
+        <li><a href="#">My Pictures</a></li>
+        <li><a href="#">My Messages</a></li>
+        <li><a href="#">Upload</a></li>
+        <%= render 'users/login_items' %>
+      </ul>
+    </div>
   </div>
 </nav>
 
 <!-- Sidenav Contents -->
 <ul class="sidenav" id="mobile-demo">
-  <li><a href="#">Account</a></li>
-  <li><a href="#">Properties</a></li>
+  <li><a href="#">My Favorites</a></li>
+  <li><a href="#">My Pictures</a></li>
+  <li><a href="#">My Messages</a></li>
   <li><a href="#">Upload</a></li>
-  <li><a href="#">Messages</a></li>
+  <%= render 'users/login_items' %>
+  <%= image_tag "blue_logo", size: "150x171" %>
 </ul>
 </div>
