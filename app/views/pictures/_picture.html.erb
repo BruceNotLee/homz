@@ -1,12 +1,9 @@
 <div class="card hoverable">
   <div class="card-image">
     <%= link_to image_tag(picture.attachment.url(:medium), class: 'feed-responsive-img'), "pictures/#{picture.id}" %>
-    <a class="btn-floating halfway-fab waves-effect waves-light red">
-      <i class="material-icons">favorite_border</i>
       <%= div_for picture do %>
-        <%= render partial: "favorites/button", locals: { picture: picture } %>
+        <%= render partial: "favorites/button2", locals: { picture: picture } %>
       <% end %>
-    </a>
   </div>
   <div class="card-content">
     <p><%=picture.caption%></p>
