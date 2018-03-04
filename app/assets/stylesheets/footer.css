@@ -1,0 +1,15 @@
+#foot {
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 4;
+  background-color: #284293;
+}
+
+
+/* color codes */
+
+/* 182668 -dark blue
+   2D4191 -medium blue
+   2D4191 -light blue */
