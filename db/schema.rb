@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301221940) do
+ActiveRecord::Schema.define(version: 20180304003418) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20180301221940) do
     t.integer "attachment_file_size"
     t.datetime "attachment_updated_at"
     t.text "raw_json"
+    t.string "caption"
   end
 
   create_table "users", force: :cascade do |t|
