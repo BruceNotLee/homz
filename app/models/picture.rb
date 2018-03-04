@@ -5,4 +5,6 @@ class Picture < ApplicationRecord
     medium: '300x300>'
   }
   validates_attachment_content_type :attachment, content_type: /\Aimage\/.*\z/
+
+  has_many :comments
 end
