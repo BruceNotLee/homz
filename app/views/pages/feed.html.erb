@@ -2,23 +2,11 @@
   <div class="grid-example col s12">
     <div class="row" id="feed-row">
       <div class="col s12" id="feed-div">
-        <!-- start erb insert -->
-        <%- @pictures.each do |picture| %>
-          <div class="card hoverable">
-            <div class="card-image">
-              <%= image_tag picture.attachment.url, class: 'feed-responsive-img' %>
-              <span class="card-title text-darken-4">Card Title</span>
-              <a class="btn-floating halfway-fab waves-effect waves-light red">
-                <i class="material-icons">favorite_border</i>
-              </a>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-            </div>
-          </div>
-        <% end %>
-        <!-- end erb insert -->
-        </div>
+        <%= render @pictures %>
+      </div>
+      <div id="infinite-scrolling">
+        <%= will_paginate @pictures%>
+      </div>
     </div>
   </div>
 </div>

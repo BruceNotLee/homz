@@ -1,0 +1,7 @@
+$('#feed-div').append('<%= j render @pictures %>');
+<% if @pictures.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate @pictures %>');
+<% else %>
+  $(window).off('scroll');
+  $('.pagination').remove();
+<% end %>

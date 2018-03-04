@@ -1,0 +1,11 @@
+<div class="card hoverable">
+  <div class="card-image">
+    <%= image_tag picture.attachment.url(:medium), class: 'feed-responsive-img' %>
+    <a class="btn-floating halfway-fab waves-effect waves-light red">
+      <i class="material-icons">favorite_border</i>
+    </a>
+  </div>
+  <div class="card-content">
+    <p><%=picture.caption%></p>
+  </div>
+</div>
