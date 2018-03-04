@@ -1,4 +1,8 @@
 $(document).ready(function(){
   console.log('sidenav ready');
-  $('.sidenav').sidenav();
+  $('.sidenav').sidenav({
+    edge: 'right',
+    draggable: true,
+
+  });
 });
