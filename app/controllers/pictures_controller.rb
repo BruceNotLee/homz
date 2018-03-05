@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /pictures
   # GET /pictures.json
   def index
@@ -15,7 +15,7 @@ class PicturesController < ApplicationController
 
   # GET /pictures/new
   def new
-    session[:zip] = params[:zip] if params[:zip] 
+    session[:zip] = params[:zip] if params[:zip]
     @picture = Picture.new
     unless user_signed_in?
       redirect_to new_user_session_path
@@ -82,6 +82,8 @@ class PicturesController < ApplicationController
   end
 
   private
+
+
     # Use callbacks to share common setup or constraints between actions.
     def set_picture
       @picture = Picture.find(params[:id])

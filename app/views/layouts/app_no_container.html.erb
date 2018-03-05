@@ -12,6 +12,7 @@
 
     <!-- Import Javascript -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_MAPS_API']%>"></script>
   </head>
 
   <body class="white">
