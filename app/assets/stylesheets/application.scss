@@ -20,6 +20,12 @@
  @import "pictures.scss";
  @import "fonts.scss";
 
+ /* color codes */
+
+ /* 182668 -dark blue
+    2D4191 -medium blue
+    2D4191 -light blue */
+
 
 body {
   display: flex;
@@ -75,4 +81,8 @@ a.brand-logo {
 
 .flow-text {
   font-size: 1rem;
+}
+
+.navbar-div li img {
+  margin: 14vh auto 0vh 20vw
 }
