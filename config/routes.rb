@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   resources :chat_rooms, only: [:new, :create, :show, :index]
   mount ActionCable.server => '/cable'
+  get '/join_chat' => "chat_rooms#create"
 
   resources :comments, only: [:new, :create]
   post 'favorites/:id' => 'favorites#favorite'

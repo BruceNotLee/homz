@@ -18,13 +18,26 @@
     </a>
 
     <!-- Message -->
+    <% if current_user %>
+    <% unless current_user.find_unread_messages.empty? %>
+    <a id="icon-message" class="margin-footer transparent btn-floating waves-effect waves-light hoverable z-depth-0" href="<%= chat_rooms_path %>">
+      <i class="fas fa-envelope red-text"></i>
+    </a>
+    <% else %>
     <a id="icon-message" class="margin-footer transparent btn-floating waves-effect waves-light hoverable z-depth-0" href="<%= chat_rooms_path %>">
       <i class="fas fa-envelope"></i>
     </a>
+    <% end %>
+    <% else %>
+    <a id="icon-message" class="margin-footer transparent btn-floating waves-effect waves-light hoverable z-depth-0" href="<%= chat_rooms_path %>">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <% end %>
 
     <!-- Profile -->
     <a id="icon-profile" class="margin-footer transparent btn-floating waves-effect waves-light hoverable z-depth-0" href=" <%= new_user_session_path %> ">
       <i class="fas fa-user"></i></a>
+    </div>
   </div>
 </div>
 
@@ -49,12 +62,21 @@
       Upload
     </a>
 
-    <!-- Message -->
-    <a id="icon-message-desktop" class="margin-footer transparent btn-large waves-effect waves-light hoverable z-depth-0" href="<%= chat_rooms_path %>">
-      <i class="fas fa-envelope"></i>
-      Messages
+    <% if current_user %>
+    <% unless current_user.find_unread_messages.empty? %>
+    <a id="icon-message" class="margin-footer transparent btn-large waves-effect waves-light hoverable z-depth-0" href="<%= chat_rooms_path %>">
+      <i class="fas fa-envelope red-text"> </i> Messages
     </a>
-
+    <% else %>
+    <a id="icon-message" class="margin-footer transparent btn-large waves-effect waves-light hoverable z-depth-0" href="<%= chat_rooms_path %>">
+      <i class="fas fa-envelope"> </i> Messages
+    </a>
+    <% end %>
+    <% else %>
+    <a id="icon-message" class="margin-footer transparent btn-large waves-effect waves-light hoverable z-depth-0" href="<%= chat_rooms_path %>">
+      <i class="fas fa-envelope"></i> Messages
+    </a>
+    <% end %>
     <!-- Profile -->
     <a id="icon-profile-desktop" class="margin-footer transparent btn-large waves-effect waves-light hoverable z-depth-0" href=" <%= new_user_session_path %> ">
       <i class="fas fa-user"></i>
