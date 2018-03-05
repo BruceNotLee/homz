@@ -11,10 +11,18 @@
     </div>
   <% end %>
 
+  <% if current_user %>
   <div class="field">
-    <%= form.label :location %>
+    <%= form.label "What is the Zip Code this home is located in?" %>
+    <%= form.text_field :location, id: :picture_location, value: current_user.location %>
+  </div>
+  <% else %>
+  <div class="field">
+    <%= form.label "What is the Zip Code this home is located in?" %>
     <%= form.text_field :location, id: :picture_location %>
   </div>
+  <% end %>
+
 
   <div class="field">
     <%= form.label :attachment %>
@@ -24,4 +32,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
-<% end %>
+
+  <% end %>
