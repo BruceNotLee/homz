@@ -13,7 +13,7 @@
         <li><a href="#">My Favorites</a></li>
         <li><a href="#">My Pictures</a></li>
         <li><a href="#">My Messages</a></li>
-        <li><a href="#">Upload</a></li>
+        <li> <%= link_to "Upload", new_picture_path %> </li>
         <%= render 'users/login_items' %>
       </ul>
     </div>
@@ -25,7 +25,7 @@
   <li><a href="#">My Favorites</a></li>
   <li><a href="#">My Pictures</a></li>
   <li><a href="#">My Messages</a></li>
-  <li><a href="#">Upload</a></li>
+  <li> <%= link_to "Upload", new_picture_path %> </li>
   <%= render 'users/login_items' %>
   <%= image_tag "blue_logo", size: "150x171" %>
 </ul>

@@ -15,7 +15,11 @@ class PicturesController < ApplicationController
 
   # GET /pictures/new
   def new
+    session[:zip] = params[:zip] if params[:zip] 
     @picture = Picture.new
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end
   end
 
   # GET /pictures/1/edit
@@ -26,7 +30,6 @@ class PicturesController < ApplicationController
   # POST /pictures.json
   def create
     @picture = Picture.new(picture_params)
-
 
     respond_to do |format|
       if @picture.save
