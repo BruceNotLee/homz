@@ -1,10 +1,6 @@
-
+<% @tags= PictureTag.where(picture_id:picture.id) %>
+<% @tags.each do |tag| %>
 <div class="chip regular-blue white-text z-depth-3">
-    Swimming Pool
+    <%= "##{tag.tag_name}" %>
 </div>
-<div class="chip regular-blue white-text z-depth-3">
-    Padio
-</div>
-<div class="chip regular-blue white-text z-depth-3">
-    Palm Tree
-</div>
+<% end %>

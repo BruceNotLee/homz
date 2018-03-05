@@ -6,7 +6,7 @@
       <% end %>
   </div>
   <div class="card-content">
-    <%= render "pictures/tag_chips" %>
+    <%= render partial: "pictures/tag_chips", locals: {picture: picture} %>
     <p><%=picture.caption%></p>
   </div>
 </div>
