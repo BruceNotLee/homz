@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180304210048) do
+
+ActiveRecord::Schema.define(version: 20180304201511) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +23,25 @@ ActiveRecord::Schema.define(version: 20180304210048) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_chat_rooms_on_user_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "body"
+    t.bigint "picture_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["picture_id"], name: "index_comments_on_picture_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "picture_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["picture_id"], name: "index_favorites_on_picture_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -77,6 +98,10 @@ ActiveRecord::Schema.define(version: 20180304210048) do
   end
 
   add_foreign_key "chat_rooms", "users"
+  add_foreign_key "comments", "pictures"
+  add_foreign_key "comments", "users"
+  add_foreign_key "favorites", "pictures"
+  add_foreign_key "favorites", "users"
   add_foreign_key "messages", "chat_rooms"
   add_foreign_key "messages", "users"
   add_foreign_key "picture_tags", "pictures"

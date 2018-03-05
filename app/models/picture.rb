@@ -6,4 +6,8 @@ class Picture < ApplicationRecord
     medium: '300x300>'
   }
   validates_attachment_content_type :attachment, content_type: /\Aimage\/.*\z/
+
+  has_many :comments
+  has_many :favorites, dependent: :destroy
+  has_many :users, through: :favorites
 end

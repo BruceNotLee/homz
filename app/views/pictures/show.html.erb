@@ -1,20 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @picture.location %>
-</p>
-
-<p>
-  Picture:
-  <%= image_tag @picture.attachment.url(:square) %>
-</p>
-
-<p>
-<%= @labels.each do |l| %>
-  <%= l %> <br>
-<% end %>
-</p>
-
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
-<%= link_to 'Back', pictures_path %>
+<!-- <p id="notice"><%= notice %></p> -->
+<!-- <%= image_tag @picture.attachment.url, class:"responsive-img"  %> -->
+<div class="picture-block">
+  <%= render @picture %>
+</div>
+<div class="comment-block">
+  <% @picture.comments.each do |c| %>
+  <p>
+    <%= c.body %> <br>
+    <%= c.user.name %> at <%= c.created_at.strftime('%x') %>
+  </p>
+  <% end %>
+  <%= render partial: 'comments/form', locals: { comment: @comment } %>
+</div>

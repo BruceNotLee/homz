@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'comments/create'
+  resources :favorites, only: [:create,:destroy]
+
   resources :pictures
 
   get 'feed', to: 'pages#feed'
@@ -10,5 +13,10 @@ Rails.application.routes.draw do
 
   resources :chat_rooms, only: [:new, :create, :show, :index]
   mount ActionCable.server => '/cable'
+
+  resources :comments, only: [:new, :create]
+  post 'favorites/:id' => 'favorites#favorite'
+
+  delete 'unfavorite/:id' => 'favorites#unfavorite', as: 'unfavorite'
 
 end

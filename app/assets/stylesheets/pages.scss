@@ -6,7 +6,7 @@
 }
 
 #feed-div{
-  padding: 0 0 0 0;
+  padding: 8vh 0 0 0;
 }
 
 //**************************************//
@@ -46,4 +46,24 @@
 .logo {
   text-align: center;
   padding-top: 5em;
+}
+#user_fav_button{
+  .material-icons{
+    display: block !important;
+  }
+  img{
+    display: none !important;
+  }
+}
+#user_fav_button.biz-logo{
+  .material-icons{
+    display: none !important;
+  }
+  img{
+    display: block !important;
+  }
+}
+
+.btn-floating.btn-large i {
+  line-height: 2.4rem;
 }

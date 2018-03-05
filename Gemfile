@@ -85,3 +85,5 @@ gem 'simplecov', require: false, group: :test
 
 # Added at 2018-03-03 20:39:28 -0500 by matt:
 gem "will_paginate", "~> 3.1"
+
+gem "record_tag_helper", "~> 1.0"

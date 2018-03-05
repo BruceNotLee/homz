@@ -1,6 +1,8 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
-  
+
+  layout "app_no_container"
+
   # GET /pictures
   # GET /pictures.json
   def index
@@ -10,7 +12,7 @@ class PicturesController < ApplicationController
   # GET /pictures/1
   # GET /pictures/1.json
   def show
-    @labels = JSON.parse(@picture.raw_json)
+    @comment =  Comment.new
   end
 
   # GET /pictures/new
