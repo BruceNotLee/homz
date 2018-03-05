@@ -1,6 +1,8 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <!-- <%= image_tag @picture.attachment.url, class:"responsive-img"  %> -->
-<%= render @picture %>
+<div class="picture-block">
+  <%= render @picture %>
+</div>
 <div class="comment-block">
   <% @picture.comments.each do |c| %>
   <p>
