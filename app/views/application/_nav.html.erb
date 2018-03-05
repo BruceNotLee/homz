@@ -1,32 +1,54 @@
 <div class="navbar-div">
 
-<nav class="nav-wrapper">
-  <div class="center">
-    <%= link_to image_tag('homz_small_logo.png'), feed_path, class:'brand-logo' %>
-  </div>
-  <div class="right">
-    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="right material-icons">account_circle</i></a>
-
-    <!-- Nav Bar menu, HIDES on small view -->
-    <div class="nav_menu">
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">My Favorites</a></li>
-        <li><a href="#">My Pictures</a></li>
-        <li><a href="#">My Messages</a></li>
-        <li><a href="#">Upload</a></li>
-        <%= render 'users/login_items' %>
-      </ul>
+  <nav class="nav-wrapper">
+    <div class="center">
+      <%= link_to image_tag('homz_small_logo.png'), feed_path, class:'brand-logo' %>
     </div>
-  </div>
-</nav>
+    <div class="right">
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+        <i class="right material-icons">account_circle</i>
+      </a>
 
-<!-- Sidenav Contents -->
-<ul class="sidenav" id="mobile-demo">
-  <li><a href="#">My Favorites</a></li>
-  <li><a href="#">My Pictures</a></li>
-  <li><a href="#">My Messages</a></li>
-  <li><a href="#">Upload</a></li>
-  <%= render 'users/login_items' %>
-  <%= image_tag "blue_logo.png", size: "150x171" %>
-</ul>
+      <!-- Nav Bar menu, HIDES on small view -->
+      <div class="nav_menu">
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="#">My Favorites</a>
+          </li>
+          <li>
+            <a href="#">My Pictures</a>
+          </li>
+          <li>
+            <a href="#">My Messages</a>
+          </li>
+          <li>
+            <a href="#">Upload</a>
+          </li>
+          <%= render 'users/login_items' %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidenav Contents -->
+  <ul class="sidenav" id="mobile-demo">
+    <li>
+      <a href="#">My Favorites</a>
+    </li>
+    <li>
+      <a href="#">My Pictures</a>
+    </li>
+    <li>
+      <a href="#">My Messages</a>
+    </li>
+    <li>
+      <a href="#">Upload</a>
+    </li>
+    <li>
+      <%= render 'users/login_items' %>
+    </li>
+    <li>
+      <%= image_tag "blue_logo.png", size: "150x171" %>
+    </li>
+  </ul>
 </div>
