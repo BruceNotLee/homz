@@ -1,9 +1,9 @@
 <% if current_user %>
-    <% if current_user.favorite?(picture) %>
-      <%= link_to(image_tag("favorite.png"), unfavorite_path(id: picture.id), class:"transparent darken-3 btn-floating halfway-fab btn-large z-depth-0 heart", method: :delete, remote: true)%>
-    <% else %>
-      <%= link_to(image_tag("logo.png"), favorite_path(id: picture.id), class:"blue darken-3 btn-floating halfway-fab btn-large z-depth-4 heart", method: :post, remote: true)%>
-    <% end %>
+  <% if current_user.favorite?(picture) %>
+    <%= link_to(image_tag("favorite.png"), unfavorite_path(id: picture.id), class:"transparent darken-3 btn-floating halfway-fab z-depth-0 heart", method: :delete, remote: true)%>
+  <% else %>
+    <%= link_to(image_tag("logo.png"), favorite_path(id: picture.id), class:"blue darken-3 btn-floating halfway-fab z-depth-4 heart", method: :post, remote: true)%>
+  <% end %>
 <% else %>
-  <%= link_to(image_tag("empty_heart.png"), new_user_session_path, class:"blue darken-3 btn-floating halfway-fab btn-large z-depth-0")%>
+  <%= link_to(image_tag("logo.png"), new_user_session_path, class:"blue darken-3 btn-floating halfway-fab z-depth-4 heart")%>
 <% end %>
