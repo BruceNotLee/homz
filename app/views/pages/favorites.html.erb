@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="grid-example col s12">
+    <div class="row" id="feed-row">
+      <div class="col s12" id="feed-div">
+        <%= render @pictures %>
+        <div id="infinite-scrolling">
+          <%= will_paginate @pictures%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
