@@ -87,3 +87,6 @@ gem 'simplecov', require: false, group: :test
 gem "will_paginate", "~> 3.1"
 
 gem "record_tag_helper", "~> 1.0"
+
+# Added at 2018-03-06 15:04:46 -0500 by matt:
+gem "faker", "~> 1.8"
