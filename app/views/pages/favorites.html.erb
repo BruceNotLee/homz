@@ -3,9 +3,9 @@
     <div class="row" id="feed-row">
       <div class="col s12" id="feed-div">
         <%= render @pictures %>
-        <div id="infinite-scrolling">
-          <%= will_paginate @pictures%>
-        </div>
+      </div>
+      <div id="infinite-scrolling">
+        <%= will_paginate @pictures%>
       </div>
     </div>
   </div>

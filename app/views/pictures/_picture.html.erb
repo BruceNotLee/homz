@@ -1,12 +1,14 @@
-<div class="card hoverable">
-  <div class="card-image">
-    <%= link_to image_tag(picture.attachment.url(:medium), class: 'feed-responsive-img'), "pictures/#{picture.id}" %>
-      <%= div_for picture do %>
-        <%= render partial: "favorites/button2", locals: { picture: picture } %>
-      <% end %>
-  </div>
-  <div class="card-content">
-    <%= render partial: "pictures/tag_chips", locals: {picture: picture} %>
-    <p><%=picture.caption%></p>
+<div class="col s12 m6 l4 xl3">
+  <div class="card hoverable">
+    <div class="card-image">
+      <%= link_to image_tag(picture.attachment.url(:medium), class: 'feed-responsive-img'), "pictures/#{picture.id}" %>
+        <%= div_for picture do %>
+          <%= render partial: "favorites/button2", locals: { picture: picture } %>
+        <% end %>
+    </div>
+    <div class="card-content">
+      <%= render partial: "pictures/tag_chips", locals: {picture: picture} %>
+      <p><%=picture.caption%></p>
+    </div>
   </div>
 </div>
