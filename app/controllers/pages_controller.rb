@@ -5,9 +5,10 @@ class PagesController < ApplicationController
   end
 
   def feed
+    # @user_zip = params[:zip]
     session[:zip] = params[:zip] if params[:zip]
 
-    @pictures = Picture.where(location: session[:zip])
+    @pictures = Picture.where(location: session[:zip]).shuffle
     rest_of_pics = Picture.all.shuffle - @pictures
     @pictures += rest_of_pics
     @pictures = @pictures.paginate(page: params[:page], per_page: 10)

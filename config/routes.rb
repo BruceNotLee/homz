@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   get 'message', to: 'pages#message'
   get 'home' => 'pages#home'
   get 'favorites' => 'pages#favorites'
-
+  post '/feed' => "pages#feed", as: "feed_post"
+  
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   root to: 'pages#landing'
 
