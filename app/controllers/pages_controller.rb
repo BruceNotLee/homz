@@ -4,6 +4,9 @@ class PagesController < ApplicationController
   def home
   end
 
+  def style
+  end
+
   def feed
     # @user_zip = params[:zip]
     session[:zip] = params[:zip] if params[:zip]

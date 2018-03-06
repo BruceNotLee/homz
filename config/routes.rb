@@ -21,4 +21,6 @@ Rails.application.routes.draw do
 
   delete 'unfavorite/:id' => 'favorites#unfavorite', as: 'unfavorite'
 
+  get 'style' => 'pages#styleguide'
+
 end
