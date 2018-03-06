@@ -9,7 +9,7 @@
     <!-- Nav Bar menu, HIDES on small view -->
     <div class="nav_menu">
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">My Favorites</a></li>
+        <li><%= link_to 'My Favorites', '/favorites' %></li>
         <li><a href="#">My Pictures</a></li>
         <li><a href="#">My Messages</a></li>
         <li> <%= link_to "Upload", new_picture_path %> </li>
@@ -18,10 +18,9 @@
     </div>
   </nav>
 
-
 <!-- Sidenav Contents -->
 <ul class="sidenav" id="mobile-demo">
-  <li><a href="#">My Favorites</a></li>
+  <li><%= link_to 'My Favorites', '/favorites' %></li>
   <li><a href="#">My Pictures</a></li>
   <li><a href="#">My Messages</a></li>
   <li> <%= link_to "Upload", new_picture_path %> </li>

@@ -24,6 +24,14 @@ class PagesController < ApplicationController
   def landing
   end
 
+  def favorites
+   @pic_ids = Favorite.where(user_id: current_user.id)
+   @pictures = @pic_ids.map do |p|
+     Picture.find(p.picture_id)
+   end
+   @pictures = @pictures.paginate(page: params[:page], per_page: 10)
+  end
+
   private
 
   def resolve_layout
@@ -36,5 +44,6 @@ class PagesController < ApplicationController
       "application"
     end
   end
+
 
 end
