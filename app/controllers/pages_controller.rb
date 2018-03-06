@@ -29,11 +29,15 @@ class PagesController < ApplicationController
   end
 
   def favorites
-   @pic_ids = Favorite.where(user_id: current_user.id)
-   @pictures = @pic_ids.map do |p|
-     Picture.find(p.picture_id)
-   end
-   @pictures = @pictures.paginate(page: params[:page], per_page: 10)
+    if current_user
+      @pic_ids = Favorite.where(user_id: current_user.id)
+    else
+      redirect_to new_user_session_path
+    end
+    @pictures = @pic_ids.map do |p|
+      Picture.find(p.picture_id)
+    end
+    @pictures = @pictures.paginate(page: params[:page], per_page: 10)
   end
 
   private
