@@ -1,179 +1,41 @@
 @font-face {
-  font-family: "Somatic-Rounded";
-  src: font_url("Somatic-Rounded.otf") unquote("format('opentype')");
+  font-family: 'Somatic-Rounded';
+  src: font-url("/assets/Somatic-Rounded.otf");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  font-family: "Obj-Black-Italic";
-  src: font_url("Objective-Black-Italic.otf") unquote("format('opentype')");
+@font-face {
+  font-family: 'Objective-Regular';
+  src: font-url("/assets/Objective-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  font-family: "Obj-Black";
-  src: font_url("Objective-Black.otf") unquote("format('opentype')");
-
-  font-family: "Obj-Bold-Italic";
-  src: font_url("Objective-Bold-Italic.otf") unquote("format('opentype')");
-
-  font-family: "Obj-Bold";
-  src: font_url("Objective-Bold.otf") unquote("format('opentype')");
-
-  font-family: "Obj-Extra-Bold-Italic";
-  src: font_url("Objective-ExtraBold-Italic.otf") unquote("format('opentype')");
-
-  font-family: "Obj-Extra-Bold";
-  src: font_url("Objective-ExtraBold.otf") unquote("format('opentype')");
-
-  font-family: "Obj-Italic";
-  src: font_url("Objective-Italic.otf") unquote("format('opentype')");
-
-  font-family: "Obj-Light-Italic";
-  src: font_url("Objective-Light-Italic.otf") unquote("format('opentype')");
-
-  font-family: "Obj-Light";
-  src: font_url("Objective-Light.otf") unquote("format('opentype')");
-
-  font-family: "Obj-Medium-Italic";
-  src: font_url("Objective-Medium-Italic.otf") unquote("format('opentype')");
-
-  font-family: "Obj-Medium";
-  src: font_url("Objective-Medium.otf") unquote("format('opentype')");
-
-  font-family: "Obj-Regular";
-  src: font_url("Objective-Regular.otf") unquote("format('opentype')");
-
-  font-family: "Obj-Super-Italic";
-  src: font_url("Objective-Super-Italic.otf") unquote("format('opentype')");
-
-  font-family: "Obj-Super";
-  src: font_url("Objective-Super.otf") unquote("format('opentype')");
-
-  font-family: "Obj-Thin-Italic";
-  src: font_url("Objective-Thin-Italic.otf") unquote("format('opentype')");
-
-  font-family: "Obj-Thin";
-  src: font_url("Objective-Thin.otf") unquote("format('opentype')");
+@font-face {
+  font-family: 'Objective-Thin';
+  src: font-url("/assets/Objective-Thin.otf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 html {
-  font-family: "Obj-Regular";
+  font-family: "Objective-Regular";
   color: black;
-}
-
-// this is the login box
-label {
-  font-size: 0.9rem;
-  color: #9e9e9e;
-}
-
-// icon on nav bar
-nav i.material-icons {
-    font-size: 2rem;
-}
-
-h1{
-}
-
-h2{
-}
-
-h3{
-}
-
-h4{
-}
-
-p{
-}
-
-li{
-}
-
-a{
-}
-
-.card .card-image .card-title {
-    color: black;
-    padding: 0px;
-}
-
-.sidenav li > a {
-  font-size: 1.5rem;
 }
 
 .Somatic-Rounded{
   font-family: "Somatic-Rounded";
-  font-weight: bold;
-}
-
-.Obj-Black-Italic{
-  font-family: "Obj-Black-Italic";
-  font-style: italic;
-}
-
-.Obj-Black{
-  font-family: "Obj-Black";
-}
-
-.Obj-Bold-Italic{
-  font-family: "Obj-Bold-Italic";
-  font-style: italic;
-  font-weight: bold;
-}
-
-.Obj-Bold{
-  font-family: "Obj-Bold";
-  font-weight: bold;
-}
-
-.Obj-Extra-Bold-Italic{
-  font-family: "Obj-Extra-Bold-Italic";
-  font-style: italic;
-  font-weight: 600;
-}
-
-.Obj-Extra-Bold{
-  font-family: "Obj-Extra-Bold";
-  font-weight: 600;
-}
-
-.Obj-Italic{
-  font-family: "Obj-Italic";
-  font-style: italic;
-}
-
-.Obj-Light-Italic{
-  font-family: "Obj-Light-Italic";
-  font-style: italic;
-}
-
-.Obj-Light{
-  font-family: "Obj-Light";
-}
-
-.Obj-Medium-Italic{
-  font-family: "Obj-Medium-Italic";
-  font-style: italic;
-}
-
-.Obj-Medium{
-  font-family: "Obj-Medium";
 }
 
 .Obj-Regular{
   font-family: "Obj-Regular";
 }
 
-.Obj-Super-Italic{
-  font-family: "Obj-Super-Italic";
-  font-style: italic;
-}
-
-.Obj-Super{
-  font-family: "Obj-Super";
-}
-
-.Obj-Thin-Italic{
-  font-family: "Obj-Thin-Italic";
-  font-style: italic;
-}
-
 .Obj-Thin{
-  font-family: "Obj-Thin";
+  font-family: "Objective-Thin";
+}
+
+#zip{
+  font-family: "Objective-Thin";
 }
