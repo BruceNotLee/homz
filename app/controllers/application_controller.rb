@@ -3,6 +3,18 @@ class ApplicationController < ActionController::Base
   # before_action :authenticate_user! #only somewhere goes here eventually
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  layout :layout_by_resource
+
+private
+
+def layout_by_resource
+  if devise_controller?
+    "sign_up"
+  else
+    "application"
+  end
+end
+
  protected
 
      def configure_permitted_parameters
