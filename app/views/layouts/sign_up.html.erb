@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html class="flow-text">
+  <head>
+    <title>HomzDirect</title>
+    <%= csrf_meta_tags %>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import Stylesheets -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Import Javascript -->
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="white">
+    <main class="container" id="sign_up_page">
+      <%= yield %>
+    </main>
+  </body>
+</html>
