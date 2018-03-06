@@ -83,3 +83,13 @@ footer.page-footer {
 .navbar-div li img {
   margin: 14vh auto 0vh 20vw
 }
+
+#icon{
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  position: relative;
+}
+#icon a {
+  position: absolute;
+  left: 25px
+}
