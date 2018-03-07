@@ -5,5 +5,5 @@
     <%= link_to(image_tag("dislike_blue.png"), favorite_path(id: picture.id), class:"transparent darken-3 btn-floating halfway-fab z-depth-0 heart", method: :post, remote: true)%>
   <% end %>
 <% else %>
-  <%= link_to(image_tag("dislike_blue.png"), new_user_session_path, class:"transparent btn-floating halfway-fab z-depth-4 heart")%>
+  <%= link_to(image_tag("dislike_blue.png"), new_user_session_path, class:"transparent btn-floating halfway-fab z-depth-0 heart")%>
 <% end %>
