@@ -16,6 +16,9 @@ if User.count < 6
   6.times do
     User.create(email: Faker::Internet.safe_email, password:'password',password_confirmation:'password', location: zips.sample)
   end
+
+  pic = Picture.find_by(attachment_file_name: "#{pic_name}.png")
+  google_vision_api(pic) if pic
 end
 
 
@@ -38,6 +41,9 @@ def google_vision_api(pic)
       end
     end
   end
+
+  pic = Picture.find_by(attachment_file_name: "#{pic_name}.png")
+  google_vision_api(pic) if pic
 end
 
 def seed_database(pic_names,houseInfo)

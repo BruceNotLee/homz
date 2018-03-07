@@ -1,14 +1,20 @@
-<div class="card">
+<div class="card chat-card">
   <div class="card-block">
     <div class="row">
-      <div class="col-md-1">
+      <div class="col s2 m1 l1">
         <%= gravatar_for message.user %>
       </div>
-      <div class="col-md-11">
-        <p class="card-text">
-          <span class="text-muted"><%= message.user.name %> at <%= message.timestamp %> says</span><br>
+      <div class="col s10 m4 l4">
+        <div class="row">
+          <div class="col 12">
+            <span class="text-muted"><%= message.user.name %> at <%= message.timestamp %> says</span><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col 12">
           <%= message.body %>
-        </p>
+        </div>
+        </div>
       </div>
     </div>
   </div>

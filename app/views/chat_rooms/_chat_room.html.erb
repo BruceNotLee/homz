@@ -1,1 +1,12 @@
-<li><%= link_to "Enter #{chat_room.title}", chat_room_path(chat_room) %></li>
+<div class="row">
+  <% unless chat_room.unread_msgs(current_user).empty? %>
+    <div class="col s12">
+      <%= link_to chat_room.chat_display_name(current_user), chat_room_path(chat_room) %>
+      <%=pluralize chat_room.unread_msgs(current_user).count,"new message","new messages"%>
+    </div>
+  <% else %>
+    <div class="col s12">
+      <%= link_to chat_room.chat_display_name(current_user), chat_room_path(chat_room) %></li>
+  </div>
+<% end %>
+</div>
