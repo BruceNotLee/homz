@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'Somatic-Rounded';
-  src: font-url("/assets/Somatic-Rounded.otf");
+  src: font-url("Somatic-Rounded.otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Objective-Regular';
-  src: font-url("/assets/Objective-Regular.otf");
-  src: font-url("/assets/Objective-Regular.woff2");
+  src: font-url("Objective-Regular.otf");
+  src: font-url("Objective-Regular.woff2");
   // src:url("https://s3.us-east-2.amazonaws.com/homz-direct-dev/fonts/Objective-Regular.woff2");
   font-weight: normal;
   font-style: normal;
@@ -16,8 +16,8 @@
 
 @font-face {
   font-family: 'Objective-Thin';
-  src: font-url("/assets/Objective-Thin.otf");
-  src: font-url("/assets/Objective-Thin.woff2");
+  src: font-url("/Objective-Thin.otf");
+  src: font-url("Objective-Thin.woff2");
   font-weight: normal;
   font-style: normal;
 }
