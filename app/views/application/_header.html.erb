@@ -1,0 +1,14 @@
+
+<div class="navbar-div">
+  <nav class="nav-wrapper">
+    <div class="left" id="zip_search">
+      <%= form_tag feed_path do %>
+      <%= text_field_tag :zip, nil, placeholder: "Search homz by zip code" %>
+      <%#= submit_tag "search", id: "search" %>
+      <% end %>
+    </div>
+    <div class="right">
+      <a class="margin-side transparent btn-floating waves-effect waves-light hoverable z-depth-0"><i id="location" class="fas fa-location-arrow"></i></a>
+    </div>
+  </nav>
+</div>

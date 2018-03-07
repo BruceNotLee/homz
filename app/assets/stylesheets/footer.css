@@ -1,10 +1,11 @@
 #foot {
-  padding: 5px;
+  padding: .5rem;
   position: fixed;
   bottom: 0;
   width: 100%;
   z-index: 1;
   background-color: #284293;
+  margin-bottom: -.1rem;
 }
 
 
@@ -13,3 +14,11 @@
 /* 182668 -dark blue
    2D4191 -medium blue
    2D4191 -light blue */
+.margin-footer{
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.row-footer {
+  margin: 0rem !important;
+}
