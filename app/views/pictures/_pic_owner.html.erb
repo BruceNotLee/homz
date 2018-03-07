@@ -1,0 +1,8 @@
+
+<% @pic_id = Picture.find(picture.id) %>
+<% @pic_owner = @pic_id.user_id %>
+<% @pic_owner_obj = User.where(id: @pic_owner) %>
+<% @user_id = @pic_owner_obj.ids %>
+<% @user_id.each do |n| %>
+  <%= User.find(n).name %>
+  <% end %>

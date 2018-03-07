@@ -20,6 +20,7 @@ class PagesController < ApplicationController
       format.html
       format.js
     end
+
   end
 
   def message
@@ -39,6 +40,16 @@ class PagesController < ApplicationController
     end
     @pictures = @pictures.paginate(page: params[:page], per_page: 10)
   end
+
+  def pics
+    if current_user
+      @users_pictures = Picture.where(user_id: current_user.id)
+    else
+      redirect_to new_user_session_path
+    end
+    @users_pictures = @users_pictures.paginate(page: params[:page], per_page: 10)
+  end
+
 
   private
 

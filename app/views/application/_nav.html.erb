@@ -16,7 +16,7 @@
     <div class="nav_menu">
       <ul class="right hide-on-med-and-down">
         <li><%= link_to 'My Favorites', '/favorites' %></li>
-        <li><a href="#">My Pictures</a></li>
+        <li> <%= link_to 'My Pictures', '/pics' %> </li>
         <li><a href="#">My Messages</a></li>
         <li> <%= link_to "Upload", new_picture_path %> </li>
         <li><%= render 'users/login_items' %></li>
