@@ -57,7 +57,7 @@ class PagesController < ApplicationController
     case action_name
     when "home", "landing"
       "home_page_layout"
-    when "feed"
+    when "feed", "favorites"
       "app_no_container"
     else
       "application"

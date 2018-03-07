@@ -1,3 +1,59 @@
-<a href="#!" class="brand-logo center, white-text">
-  <%= link_to image_tag('homz_small_logo.png'), feed_path, class:'brand-logo' %>
-</a>
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+<!-- Tablet and smaller -->
+<div class="row-footer row hide-on-large-only">
+  <div class="center">
+    <!-- Home -->
+    <a id="icon-home" class="margin-footer transparent btn-floating waves-effect waves-light hoverable z-depth-0" href=" <%= feed_path %> ">
+      <i class="fas fa-home"></i>
+    </a>
+
+    <!-- Favorites -->
+    <a id="icon-favorites" class="margin-footer transparent btn-floating waves-effect waves-light hoverable z-depth-0" href="<%= my_favorites_path %>">
+      <i class="fas fa-heart"></i>
+    </a>
+
+    <!-- Upload -->
+    <a id="icon-upload" class="margin-footer transparent btn-floating waves-effect waves-light hoverable z-depth-0" href="/upload">
+      <i class="fas fa-plus-circle"></i>
+    </a>
+
+    <!-- Message -->
+    <a id="icon-message" class="margin-footer transparent btn-floating waves-effect waves-light hoverable z-depth-0" href="<%= chat_rooms_path %>">
+      <i class="fas fa-envelope"></i>
+    </a>
+
+    <!-- Profile -->
+    <a id="icon-profile" class="margin-footer transparent btn-floating waves-effect waves-light hoverable z-depth-0" href=" <%= new_user_session_path %> ">
+      <i class="fas fa-user"></i></a>
+  </div>
+</div>
+
+<!-- Desktop -->
+<div class="row center hide-on-med-and-down">
+  <div class="center">
+    <!-- Home -->
+    <a id="icon-home" class="margin-footer transparent btn-large waves-effect waves-light hoverable z-depth-0" href=" <%= feed_path %> ">
+      <i class="fas fa-home"> Home</i>
+    </a>
+
+    <!-- Favorites -->
+    <a id="icon-favorites" class="margin-footer transparent btn-large waves-effect waves-light hoverable z-depth-0" href="<%= my_favorites_path %>">
+      <i class="fas fa-heart"> Favorites</i>
+    </a>
+
+    <!-- Upload -->
+    <a id="icon-upload" class="margin-footer transparent btn-large waves-effect waves-light hoverable z-depth-0" href="/upload">
+      <i class="fas fa-plus-circle"> Upload</i>
+    </a>
+
+    <!-- Message -->
+    <a id="icon-message" class="margin-footer transparent btn-large waves-effect waves-light hoverable z-depth-0" href="<%= chat_rooms_path %>">
+      <i class="fas fa-envelope"> Messages</i>
+    </a>
+
+    <!-- Profile -->
+    <a id="icon-profile" class="margin-footer transparent btn-large waves-effect waves-light hoverable z-depth-0" href=" <%= new_user_session_path %> ">
+      <i class="fas fa-user">Profile</i> 
+    </a>
+  </div>
+</div>
