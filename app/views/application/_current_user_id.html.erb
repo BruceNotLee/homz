@@ -1,0 +1,5 @@
+<% if current_user %>
+<body data-current-user-id="<%=current_user.id%>" class="white">
+<% else %>
+<body data-current-user-id=0 class="white">
+<% end %>
