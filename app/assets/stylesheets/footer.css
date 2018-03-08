@@ -6,8 +6,21 @@
   z-index: 1;
   background-color: #284293;
   margin-bottom: -.1rem;
+  font-size: 1.5vw
 }
 
+#foot .btn-floating i {
+  font-size: 5vw;
+
+}
+
+#foot .btn-large i {
+  font-size: 3vw;
+}
+
+#desktop-icons .btn-floating i {
+    font-size: 3vw;
+}
 
 /* color codes */
 
@@ -15,8 +28,8 @@
    2D4191 -medium blue
    2D4191 -light blue */
 .margin-footer{
-  margin-left: .5rem;
-  margin-right: .5rem;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .row-footer {

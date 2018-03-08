@@ -1,0 +1,9 @@
+<% if current_user %>
+  <%= link_to join_chat_path(title: "#{current_user.id}-#{picture.id}-chat", pic_owner_id: picture.user_id) do %>
+  <i class="fas fa-comments"></i>
+<% end %>
+  <% else %>
+    <%= link_to new_user_session_path, remote: true do %>
+    <i class="fas fa-comments"></i>
+  <% end %>
+<% end %>

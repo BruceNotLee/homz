@@ -1,0 +1,27 @@
+.stats {
+  width: auto;
+  font-size: 1vw;
+  font-family: "Objective-Thin";
+  white-space: nowrap;
+  padding-top: 1vh !important;
+}
+
+.card .stat-content {
+  padding: 1vh 1vw;
+}
+
+.property-stat{
+
+}
+
+.follower-stat {
+
+}
+
+.likes-stat {
+
+}
+
+.comment-stat {
+
+}

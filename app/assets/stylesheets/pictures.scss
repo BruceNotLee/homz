@@ -4,5 +4,15 @@
 }
 
 .card .card-content{
-  padding: 35px 25px;
+  padding: .5vh 1vw !important;
+}
+
+.card-header-content {
+  font-family: "Objective-Regular" !important;
+  font-size: 1.5vw;
+  margin-bottom: 0;
+}
+
+.card-bottom {
+  min-height: 80px;
 }

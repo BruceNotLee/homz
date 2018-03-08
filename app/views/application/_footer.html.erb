@@ -3,10 +3,9 @@
 <div class="row-footer row hide-on-large-only">
   <div class="center">
     <!-- Home -->
-
-    <%= link_to feed_path, class: "margin-footer transparent btn-floating waves-effect waves-light hoverable z-depth-0", id: "icon-home" do %>
-      <i class="fas fa-home"></i>
-    <% end %>
+    <span id="icon-home">
+      <%= render partial: 'footer_icons', locals: { path: feed_path, icon: "fas fa-home" } %>
+    </span>
 
     <!-- Favorites -->
     <span id="icon-favorites">
@@ -45,36 +44,36 @@
 </div>
 
 <!-- Desktop -->
-<div class="row center hide-on-med-and-down">
+<div id="desktop-icons" class="row center hide-on-med-and-down">
   <div class="center">
     <!-- Home -->
-    <a id="icon-home-desktop" class="margin-footer transparent btn-large waves-effect waves-light hoverable z-depth-0" href=" <%= feed_path %> ">
-      <i class="fas fa-home"></i>
-      Home
-    </a>
+    <span id="icon-home-desktop">
+      <%= render partial: 'footer_icons', locals: { path: feed_path, icon: "fas fa-home" } %> Home
+    </span>
+
     <!-- Favorites -->
-<span id="icon-favorites-desktop">
-  <%= render partial: 'footer_icons', locals: { path: my_favorites_path, icon: "fas fa-heart" } %>Favorites
-</span>
+    <span id="icon-favorites-desktop">
+      <%= render partial: 'footer_icons', locals: { path: my_favorites_path, icon: "fas fa-heart" } %> Favorites
+    </span>
 
     <!-- Upload -->
     <span id="icon-upload-desktop">
-      <%= render partial: 'footer_icons', locals: { path: upload_path, icon: "fas fa-plus-circle" } %>Upload
+      <%= render partial: 'footer_icons', locals: { path: upload_path, icon: "fas fa-plus-circle" } %> Upload
     </span>
 
     <% if current_user %>
     <% unless current_user.find_unread_messages.empty? %>
     <span id="icon-message-desktop" class="red-text">
-      <%= render partial: 'footer_icons', locals: { path: chat_rooms_path, icon: "fas fa-envelope" } %>
+      <%= render partial: 'footer_icons', locals: { path: chat_rooms_path, icon: "fas fa-envelope" } %> Messages
     </span>
     <% else %>
     <span id="icon-message-desktop">
-      <%= render partial: 'footer_icons', locals: { path: chat_rooms_path, icon: "fas fa-envelope" } %>
+      <%= render partial: 'footer_icons', locals: { path: chat_rooms_path, icon: "fas fa-envelope" } %> Messages
     </span>
     <% end %>
     <% else %>
     <span id="icon-message-desktop">
-      <%= render partial: 'footer_icons', locals: { path: chat_rooms_path, icon: "fas fa-envelope" } %>
+      <%= render partial: 'footer_icons', locals: { path: chat_rooms_path, icon: "fas fa-envelope" } %> Messages
     </span>
     <% end %>
     <!-- Profile -->
