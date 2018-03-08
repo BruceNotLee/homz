@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   post '/feed' => "pages#feed", as: "feed_post"
   get '/pics' => "pages#pics"
   get 'upload' => 'pictures#new'
+  get 'profile' => 'pages#profile', as: "profile"
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", sessions: 'users/sessions' }
 

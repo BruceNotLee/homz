@@ -1,0 +1,82 @@
+<div id="profile-page-header">
+  <div class="row">
+    <div class="col s12">
+      <div class="card">
+
+        <!-- background image -->
+        <div id="profile-header-image" class="card-image">
+          <img src="assets/milky_way.jpg">
+
+          <!-- profile title -->
+          <span id="profile-title" class="right white-text"> <%= @user.name %> </span>
+
+            <!-- gravatar profile image -->
+            <a href="https://gravatar.com/">
+            <%= link_to gravatar_for @user, :size => "300", :class => "btn-floating, btn-large, halfway-fab", :id => "profile-image" %>
+            </a>
+            <!-- https://gravatar.com/ -->
+
+        </div> <!-- end background image -->
+
+        <!-- profile card content -->
+        <div id="profile-content" class="card-content">
+          <div class="center">
+            <div class="row">
+              <div id="property-stat" class="profile-stats col s4">
+                Properties 1
+              </div>
+              <div id="follower-stat" class="profile-stats col s4">
+                Followers 4
+              </div>
+              <div id="likes-stat" class="profile-stats col s4">
+                Likes 40
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- login items -->
+          <div id="login" class="">
+            <div class="actions">
+            <%= render 'users/login_items' %>
+            </div>
+            <div class="actions">
+              <%= link_to "Edit Profile", edit_user_registration_path %>
+            </div>
+          </div>
+
+        </div>
+        <!-- End profile card content -->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- User image feed -->
+<div id="profile-page-content">
+  <% if current_user.pictures.count != 0 %>
+  <div class="row">
+
+    <!-- grid full width -->
+    <div class="grid-example col s12">
+      <div class="row" id="feed-row">
+        <div class="col s12" id="feed-div">
+
+          <!-- Pulls the profiles photos -->
+          <%= render @users_pictures %>
+          <% else -%>
+
+          <!-- if no images then display -->
+          <%= "<p>Submit your first photo to see them populated here. ADD Upload button large here!</p>".html_safe %>
+          <% end -%>
+        </div>
+
+        <!-- pull new photos on scroll -->
+        <div id="infinite-scrolling">
+          <%= will_paginate @users_pictures%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
