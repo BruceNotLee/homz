@@ -21,8 +21,6 @@ jQuery(document).on('turbolinks:load', function() {
           message: message,
           chat_room_id: chat_room_id
         });
-
-        //also send a message out the notifications channel?
       }
     });
     return $('#new_message').submit(function(e) {

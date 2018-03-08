@@ -9,7 +9,13 @@ class ChatRoomsChannel < ApplicationCable::Channel
 
   def send_message(data)
     current_user.messages.create!(body: data['message'], chat_room_id: data['chat_room_id'])
-
-    #here is where I would send data to the "notifications channel" with the recepient ID included
+    chat_room = ChatRoom.find(data['chat_room_id'])
+    if current_user.id == chat_room.user_id
+      user = ChatInvite.find_by(chat_room_id: chat_room.id).user
+    else
+      user = current_user
+    end
+    NotificationsChannel.broadcast_to(user, user.find_unread_messages.count)
+    head :ok
   end
 end
