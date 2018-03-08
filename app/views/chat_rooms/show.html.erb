@@ -1,19 +1,16 @@
-<div class="container">
-  <div class="row">
+<div class="row">
     <h3><%= @chat_room.chat_display_name(current_user) %></h3>
 
 
-<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-  <%= render @chat_room.messages %>
-</div>
-
-<%= form_for @message, url: '#' do |f| %>
-  <div class="form-group">
-    <%= f.text_area :body, class: 'form-control' %>
-    <small class="text-muted">From 2 to 1000 characters</small>
+  <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+    <%= render @chat_room.messages %>
   </div>
 
-  <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
-<% end %>
-  </div>
+  <%= form_for @message, url: '#' do |f| %>
+    <div class="form-group">
+      <%= f.text_area :body, class: 'form-control' %>
+      <small class="text-muted">From 2 to 1000 characters</small>
+    </div>
+    <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
+  <% end %>
 </div>
