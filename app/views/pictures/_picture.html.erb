@@ -5,8 +5,8 @@
       <%= link_to(image_tag("mail.png"), join_chat_path(title: "#{current_user.id}-#{picture.id}-chat", pic_owner_id: picture.user_id) , class:"transparent btn-floating halfway-fab z-depth-5 left heart")%>
       <% else %>
       <%= link_to(image_tag("mail.png"), new_user_session_path, class:"transparent btn-floating halfway-fab z-depth-5 left heart") %>
-      <% end %>      
-      <%= link_to image_tag(picture.attachment.url(:medium), class: 'feed-responsive-img'), make_picture_path(picture) %>
+      <% end %>
+      <%= link_to image_tag(picture.attachment.url(:medium), class: 'feed-responsive-img'), "/pictures/#{picture.id}" %>
       <%= div_for picture do %>
       <%= render partial: "favorites/button2", locals: { picture: picture } %>
       <% end %>
