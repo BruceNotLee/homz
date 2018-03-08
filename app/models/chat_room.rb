@@ -16,7 +16,7 @@ class ChatRoom < ApplicationRecord
 
   def chat_display_name(user)
     if user_id == user.id
-      user = ChatInvite.find_by(chat_room_id: id).user
+      user = ChatInvite.find_by(chat_room_id: id).user if ChatInvite.find_by(chat_room_id: id)
       "#{user.name} RE: #{title.split('-')[1]}"
     else
       user = User.find(user_id)
