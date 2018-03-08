@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'comments/create'
   resources :favorites, only: [:create,:destroy]
 
-  resources :pictures
+  resources :pictures, only: [:new,:create,:edit,:show,:destroy]
 
   get 'feed', to: 'pages#feed'
   get 'message', to: 'pages#message'
