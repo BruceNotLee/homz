@@ -1,0 +1,38 @@
+#profile-header-image {
+
+}
+
+#login {
+ // margin-left: 2vw;
+ padding: 1vh 2vw;
+}
+
+#profile-image {
+width: 20%;
+position: absolute;
+top: 30%;
+left: 5%;
+border-radius: 50%;
+border-color: #fffafa7d;
+border-width: 1px;
+border-style: solid;
+}
+
+#profile-title {
+  position: absolute;
+  bottom: 0;
+  right: 4vw !important;
+  max-width: 65%;
+  font-size: 3vw;
+  padding: 1vh 2vw;
+}
+
+#profile-content {
+  padding: 1vh 1vw;
+}
+
+.profile-stats {
+  width: auto;
+  font-size: x-small;
+  font-family: "Objective-Thin"
+}

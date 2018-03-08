@@ -29,6 +29,17 @@ class PagesController < ApplicationController
   def landing
   end
 
+  def profile
+    if current_user
+      @users_pictures = Picture.where(user_id: current_user.id)
+      @user = current_user
+      @email = current_user.email
+    else
+      redirect_to new_user_session_path
+    end
+    @users_pictures = @users_pictures.paginate(page: params[:page], per_page: 10)
+  end
+
   def favorites
     if current_user
       @pic_ids = Favorite.where(user_id: current_user.id)
@@ -57,7 +68,7 @@ class PagesController < ApplicationController
     case action_name
     when "home", "landing"
       "home_page_layout"
-    when "feed", "favorites"
+    when "feed", "favorites", "profile"
       "app_no_container"
     else
       "application"
