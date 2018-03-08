@@ -1,15 +1,27 @@
-App.notifications = App.cable.subscriptions.create("NotificationsChannel", {
-  connected: function() {
-    console.log("connected");
-    // Called when the subscription is ready for use on the server
-  },
+document.addEventListener('turbolinks:load', function() {
 
-  disconnected: function() {
-    // console.log("Disconnected");
-    // Called when the subscription has been terminated by the server
-  },
+  let userId = document.body.getAttribute('data-current-user-id');
 
-  received: function(data) {
-    // Called when there's incoming data on the websocket for this channel
-  }
+
+  App.cable.subscriptions.create(
+    {
+      channel: "NotificationsChannel",
+      id: userId
+    },
+    {
+      connected: function() {
+        // console.log('connected');
+      },
+      disconnected: function() {
+        // console.log('disconnected');
+      },
+      received: function(data) {
+        // console.log('received');
+        console.log(data);
+        let notifier = $('#icon-message').find('i').addClass('red-text')
+        notifier.addClass('red-text')
+
+      }
+    }
+  )
 });
