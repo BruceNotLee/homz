@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'pages#landing'
+
   get 'comments/create'
   resources :favorites, only: [:create,:destroy]
 
@@ -12,8 +15,7 @@ Rails.application.routes.draw do
   get '/pics' => "pages#pics"
   get 'upload' => 'pictures#new'
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  root to: 'pages#landing'
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", sessions: 'users/sessions' }
 
   resources :chat_rooms, only: [:new, :create, :show, :index]
   mount ActionCable.server => '/cable'

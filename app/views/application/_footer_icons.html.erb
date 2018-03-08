@@ -1,0 +1,11 @@
+<!-- mobile version -->
+
+<% if current_user %>
+<%= link_to path, class: "margin-footer transparent btn-floating waves-effect waves-light hoverable z-depth-0" do %>
+  <i class="<%= icon %>"></i>
+<% end %>
+<% else %>
+<%= link_to new_user_session_path, class: "margin-footer transparent btn-floating waves-effect waves-light hoverable z-depth-0", remote: true do %>
+  <i class= "<%= icon %> auth"></i>
+<% end %>
+<% end %>
