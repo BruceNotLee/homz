@@ -4,4 +4,14 @@
 
 .heart{
     overflow: initial !important;
+
+}
+
+.heart.card.card-image img {
+  position: absolute !important;
+
+}
+
+.heart.btn-floating.halfway-fab {
+  bottom: 1% !important;
 }
