@@ -2,22 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .comment{
-  background-color: #2568e9;
-  padding-left: 1em;
-  border-radius: 25px;
-clear:none;
+  // display: inline-block;
+  // padding-right: 1.5em;
+  // padding-left: 0.9em;
+  background-color: #eaecf1;
+  border-radius: 5px;
+  -webkit-box-shadow: -4px 4px 21px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: -4px 4px 21px -3px rgba(0,0,0,0.75);
+  box-shadow: -4px 4px 21px -3px rgba(0,0,0,0.75);
+
 }
 
 .comment-body{
-  font-size: 3.7vw;
+  font-size: 1.1em;
+  padding-left: 0.7em;
+  margin-top: -1em;
 }
 
 .name{
-  font-size: 2.5vw;
+  font-size: 1.2em;
 }
 
 .time{
   padding-left: 2em;
-  font-size: 2vw;
-clear:none;
+  font-size: 0.7em;
+  margin-top: -1em;
+  margin-bottom: 1.5em;
 }
