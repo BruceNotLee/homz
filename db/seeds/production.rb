@@ -1,15 +1,16 @@
 house1 = %w[1 2 3 4 5 6]
-house1info = {location: "33138", caption: "Miami Shores/33138 - 4/5.5 - 3000 sqft - $1,800,000", user_id: 1}
+house1info = {location: "33138", caption: "Miami Shores - 4/5.5 - 3000 sqft - $1,800 K", user_id: 1}
 house2 = [*(7..29)]
-house2info = {location: "33140", caption: "Miami Beach/33140 - 4/3 - 2550 sqft - $2,550,00000", user_id: 2}
+house2info = {location: "33140", caption: "Miami Beach - 4/3 - 2550 sqft - $2,550 K", user_id: 2}
 house3 = [*(30..38)]
-house3info = {location: "33138", caption: "Miami Shores/33138 - 4/3 - 2884 sqft - $1,350,000", user_id: 3}
+house3info = {location: "33138", caption: "Miami Shores - 4/3 - 2884 sqft - $1,350 K", user_id: 3}
 house4 = %w[39 40 41]
-house4info = {location: "33150", caption: "Miami Shores/33150 - 3/2 - 1995 sqft - $499,000", user_id: 4}
+house4info = {location: "33150", caption: "Miami Shores - 3/2 - 1995 sqft - $499 K", user_id: 4}
 house5 = [*(42..49)]
-house5info = {location: "33138", caption: "Miami Shores/33138 - 3/2 - 2241 sqft - $680", user_id: 5}
+house5info = {location: "33138", caption: "Miami Shores - 3/2 - 2241 sqft - $680 K", user_id: 5}
 house6 = [*(50..54)]
-house6info = {location: "33138", caption: "Miami Shores/33138 - 2/2 - 1524 sqft - $750,000", user_id: 6}
+house6info = {location: "33138", caption: "Miami Shores - 2/2 - 1524 sqft - $750 K", user_id: 6}
+
 
 zips = [33138,33140,33150]
 if User.count < 6
