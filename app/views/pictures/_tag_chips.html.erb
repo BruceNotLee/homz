@@ -1,6 +1,15 @@
-<% @tags= PictureTag.where(picture_id:picture.id) %>
+<% filter = ["property", "home", "room", "real estate", "estate"] %>
+
+<% @tags = PictureTag.where(picture_id: picture.id).pluck(:tag_name).shuffle %>
+
+<% i=0 %>
 <% @tags.each do |tag| %>
-<div class="chip regular-blue white-text z-depth-3">
-    <%= "##{tag.tag_name}" %>
-</div>
+
+  <% unless filter.include?(tag)  %>
+    <div class="chip regular-blue white-text z-depth-3">
+      <%= "##{tag}" %>
+      <% i+=1 %>
+    </div>
+    <% end %>
+    <% break if i>2 %>
 <% end %>
