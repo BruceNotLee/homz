@@ -3,25 +3,17 @@
   font-size: 12px;
   font-family: "Objective-Thin";
   white-space: nowrap;
-  padding: 1vh !important;
+  /* padding: 1vh !important; */
 }
 
 .card .stat-content {
   padding: 1vh 1vw;
 }
 
-.property-stat{
+.property-stat {}
 
-}
+.follower-stat {}
 
-.follower-stat {
+.likes-stat {}
 
-}
-
-.likes-stat {
-
-}
-
-.comment-stat {
-
-}
+.comment-stat {}

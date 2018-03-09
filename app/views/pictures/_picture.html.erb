@@ -45,10 +45,12 @@
     </div> <!-- end card-image -->
     <div class="card-content card-bottom">
       <%= render partial: "pictures/stats", locals: {picture: picture} %>
+      <div class="center-align picture-caption">
+        <%= picture.caption%>
+      </div>
       <%= render partial: "pictures/tag_chips", locals: {picture: picture} %><br>
-      <p><%=picture.caption%></p>
       <!-- Time since post -->
-      <div id="" class="card-header-content stats col s3">
+      <div id="posted-time" class="card-header-content stats col s3">
         Posted <%= time_ago_in_words(picture.created_at) %> ago
       </div>
     </div>
