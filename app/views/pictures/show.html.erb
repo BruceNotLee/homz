@@ -1,5 +1,6 @@
 <div class="picture-block">
   <%= render @picture %>
+  <%= render partial: "pictures/share" %>
 </div>
 <div class="comment-block">
   <% @picture.comments.each do |c| %>
