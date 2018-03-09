@@ -44,7 +44,7 @@
 
     </div> <!-- end card-image -->
     <div class="card-content card-bottom">
-      <%= render partial: "pictures/stats" %>
+      <%= render partial: "pictures/stats", locals: {picture: picture} %>
       <%= render partial: "pictures/tag_chips", locals: {picture: picture} %><br>
       <p><%=picture.caption%></p>
       <!-- Time since post -->

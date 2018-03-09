@@ -12,7 +12,7 @@
 
     <!-- Comments -->
     <div id="" class="comment-stat stats col s3">
-      12 Comments
+      <%= pluralize(picture.comments.count, 'Comment') -%>
     </div>
 
     <!-- Shares -->
