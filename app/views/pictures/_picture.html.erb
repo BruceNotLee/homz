@@ -5,18 +5,9 @@
 
       <!-- card HEADER -->
       <div class="row center card-header-content">
-        <!-- Picture Owner -->
-        <div id="" class="card-header-content stats col s3">
-          <%= render partial: 'pictures/pic_owner', locals: {picture: picture} %>
-        </div>
-
-        <!-- Time since post -->
-        <div id="" class="card-header-content stats col s3">
-          pasted 1 hour ago
-        </div>
 
         <!-- message owner -->
-        <div class="card-header-content stats col s3">
+        <div class="card-header-content stats col s1 right chat">
           <% if current_user %>
             <%= link_to join_chat_path(title: "#{current_user.id}-#{picture.id}-chat", pic_owner_id: picture.user_id) do %>
             <i class="fas fa-comments"></i>
@@ -28,6 +19,11 @@
           <% end %>
         </div>
         <!-- end message owner -->
+
+        <!-- Picture Owner -->
+        <div id="" class="ellipsis card-header-content stats col s7 poster-name right">
+          <%= render partial: 'pictures/pic_owner', locals: {picture: picture} %>
+        </div>
 
         <!-- Schedule a visit -->
         <div id="" class="card-header-content stats col s3">
@@ -51,6 +47,10 @@
       <%= render partial: "pictures/stats" %>
       <%= render partial: "pictures/tag_chips", locals: {picture: picture} %><br>
       <p><%=picture.caption%></p>
+      <!-- Time since post -->
+      <div id="" class="card-header-content stats col s3">
+        pasted 1 hour ago
+      </div>
     </div>
   </div>
 </div>

@@ -1,9 +1,9 @@
 .stats {
   width: auto;
-  font-size: 1vw;
+  font-size: 12px;
   font-family: "Objective-Thin";
   white-space: nowrap;
-  padding-top: 1vh !important;
+  padding: 1vh !important;
 }
 
 .card .stat-content {
