@@ -4,5 +4,31 @@
 }
 
 .card .card-content{
-  padding: 35px 25px;
+  padding: .5vh 1vw !important;
+  font-size: 12px;
+}
+
+.card-header-content {
+  font-family: "Objective-Regular" !important;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.card-bottom {
+  min-height: 80px;
+}
+
+.poster-name {
+  bottom: 0;
+  width: auto;
+  text-align: end;
+}
+
+.chat {
+  padding-left: 0px !important;
+  text-align: start;
+}
+
+.calendar {
+  text-align: end;
 }
