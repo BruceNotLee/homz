@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180307200507) do
+ActiveRecord::Schema.define(version: 20180308231724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -82,7 +82,22 @@ ActiveRecord::Schema.define(version: 20180307200507) do
     t.text "raw_json"
     t.string "caption"
     t.bigint "user_id"
+    t.bigint "property_id"
+    t.index ["property_id"], name: "index_pictures_on_property_id"
     t.index ["user_id"], name: "index_pictures_on_user_id"
+  end
+
+  create_table "properties", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "bed"
+    t.string "bath"
+    t.string "zip"
+    t.string "neighborhood"
+    t.string "price"
+    t.string "sqft"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -113,5 +128,7 @@ ActiveRecord::Schema.define(version: 20180307200507) do
   add_foreign_key "messages", "chat_rooms"
   add_foreign_key "messages", "users"
   add_foreign_key "picture_tags", "pictures"
+  add_foreign_key "pictures", "properties"
   add_foreign_key "pictures", "users"
+  add_foreign_key "properties", "users"
 end

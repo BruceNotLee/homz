@@ -1,0 +1,84 @@
+<%= form_with(model: property, local: true) do |form| %>
+  <% if property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+      <ul>
+      <% property.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.hidden_field :user_id, value: current_user.id %>
+  </div>
+
+
+  <div class="row">
+    <div class="col s6">
+
+  <div class="field">
+    <%= form.label :bed %>
+    <%= form.text_field :bed, id: :property_bed %>
+  </div>
+</div>
+
+<div class="col s6">
+
+  <div class="field">
+    <%= form.label :bath %>
+    <%= form.text_field :bath, id: :property_bath %>
+  </div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col s4">
+
+  <div class="field">
+    <%= form.label :zip %>
+    <%= form.text_field :zip, id: :property_zip %>
+  </div>
+</div>
+<div class="col s8">
+
+  <div class="field">
+    <%= form.label :neighborhood %>
+    <%= form.text_field :neighborhood, id: :property_neighborhood %>
+  </div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :property_price %>
+  </div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+
+  <div class="field">
+    <%= form.label :sqft %>
+    <%= form.text_field :sqft, id: :property_sqft %>
+  </div>
+</div>
+</div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<!-- MODAL -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <%= render template: 'users/sessions/new.html.erb' %>
+  </div>
+</div>

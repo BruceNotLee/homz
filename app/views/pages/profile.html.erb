@@ -36,9 +36,15 @@
         </div>
 
           <!-- login items -->
+
           <div id="login" class="">
-            <div class="actions">
+            <div class="row">
+            <div class="actions col s6 ">
             <%= render 'users/login_items' %>
+            </div>
+            <div class="col s6 right-align">
+              <%= link_to "My Properties", properties_path %>
+            </div>
             </div>
             <div class="actions">
               <%= link_to "Edit Profile", edit_user_registration_path %>

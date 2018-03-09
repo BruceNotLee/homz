@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :properties
   root 'pages#landing'
 
   get 'comments/create'
