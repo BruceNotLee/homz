@@ -13,7 +13,6 @@ class PicturesController < ApplicationController
   # GET /pictures/1.json
   def show
     @comment =  Comment.new
-    # redirect_to @picture.property unless @picture.property_id.nil?
   end
 
   # GET /pictures/new
