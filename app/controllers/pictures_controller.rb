@@ -13,6 +13,7 @@ class PicturesController < ApplicationController
   # GET /pictures/1.json
   def show
     @comment =  Comment.new
+    # redirect_to @picture.property unless @picture.property_id.nil?
   end
 
   # GET /pictures/new
@@ -93,6 +94,6 @@ class PicturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def picture_params
-      params.require(:picture).permit(:location,:attachment,:user_id)
+      params.require(:picture).permit(:location,:attachment,:user_id, :property_id)
     end
 end

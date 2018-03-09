@@ -1,39 +1,51 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <% if current_user.id == @property.user_id %>
+        <%= link_to "Back", properties_path %>
+      <% end %>
+    </div>
+  </div>
+<div class="row">
+  <div class="col s6">
+    <strong>Bed:</strong>
+    <%= @property.bed %>
+  </div>
 
-<p>
-  <strong>User:</strong>
-  <%= @property.user %>
-</p>
+  <div class="col s6">
+    <strong>Bath:</strong>
+    <%= @property.bath %>
+  </div>
+</div>
 
-<p>
-  <strong>Bed:</strong>
-  <%= @property.bed %>
-</p>
+<div class="row">
+  <div class="col s4">
+    <strong>Zip:</strong>
+    <%= @property.zip %>
+  </div>
+  <div class="col s8">
+    <strong>Neighborhood:</strong>
+    <%= @property.neighborhood %>
+  </div>
+</div>
 
-<p>
-  <strong>Bath:</strong>
-  <%= @property.bath %>
-</p>
 
-<p>
-  <strong>Zip:</strong>
-  <%= @property.zip %>
-</p>
 
-<p>
-  <strong>Neighborhood:</strong>
-  <%= @property.neighborhood %>
-</p>
+<div class="row">
+  <div class="col s4">
+    <strong>Sqft:</strong>
+    <%= @property.sqft %>
+  </div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @property.price %>
-</p>
+  <div class="col s8">
+    <strong>Price:</strong>
+    <%= @property.price %>
+  </div>
+</div>
 
-<p>
-  <strong>Sqft:</strong>
-  <%= @property.sqft %>
-</p>
+<% unless @pictures.nil? || @pictures.empty? %>
+<%= render @pictures %>
+<% end %>
 
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>
+</div>

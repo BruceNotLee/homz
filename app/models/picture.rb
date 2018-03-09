@@ -1,5 +1,6 @@
 class Picture < ApplicationRecord
   belongs_to :user
+  belongs_to :property, optional: true
   has_attached_file :attachment, default_url: 'missing.png', styles: {
     thumb: '100x100>',
     square: '200x200#',

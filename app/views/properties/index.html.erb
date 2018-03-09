@@ -1,13 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Properties</h1>
+<div class="row">
+  <div class="col s12 center-align">
+    <h3>My  Properties</h3>
+  </div>
+</div>
 
-<table>
+<div class="row">
+  <div class="col s12">
+    <%= link_to 'New Property', new_property_path %>
+  </div>
+</div>
+
+<table class="responsive-table striped">
   <thead>
     <tr>
-      <th>User</th>
-      <th>Bed</th>
-      <th>Bath</th>
+      <th>Bed/Bath</th>
       <th>Zip</th>
       <th>Neighborhood</th>
       <th>Price</th>
@@ -19,9 +27,7 @@
   <tbody>
     <% @properties.each do |property| %>
       <tr>
-        <td><%= property.user %></td>
-        <td><%= property.bed %></td>
-        <td><%= property.bath %></td>
+        <td class="center-align"><%= property.bed %>/<%= property.bath %></td>
         <td><%= property.zip %></td>
         <td><%= property.neighborhood %></td>
         <td><%= property.price %></td>
@@ -33,7 +39,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Property', new_property_path %>
