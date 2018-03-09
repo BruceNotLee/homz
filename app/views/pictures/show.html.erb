@@ -1,17 +1,25 @@
 <div class="picture-block">
   <%= render @picture %>
-  <%= render partial: "pictures/share" %>
 </div>
 <div class="comment-block">
   <% @picture.comments.each do |c| %>
-  <p>
-    <%= c.body %> <br>
-    <%= c.user.name %> at <%= c.created_at.strftime('%x') %>
-  </p>
+  <div class="comment">
+    <p>
+      <div class="name">
+        <%= c.user.name %>
+      </div>
+      <div class="comment-body">
+        <%= c.body %>
+      </div>
+    </p>
+  </div>
+  <div class="time">
+    at <%= c.created_at.strftime('%x') %>
+  </div>
+
   <% end %>
   <%= render partial: 'comments/form', locals: { comment: @comment } %>
 </div>
-
 <!-- Modal Trigger -->
   <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1"></a> -->
 
