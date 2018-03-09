@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://redistogo:0dab10803276b43479c52642c4bac252@soldierfish.redistogo.com:10799/
   channel_prefix: homz_direct_production

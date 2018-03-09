@@ -99,4 +99,8 @@ Rails.application.configure do
       s3_host_name: ENV.fetch('S3_HOST_NAME')
     }
   }
+
+  config.web_socket_server_url = "wss://hidden-brook-71610.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://hidden-brook-71610.herokuapp.com', 'http://hidden-brook-71610.herokuapp.com']
+
 end
