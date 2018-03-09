@@ -1,10 +1,7 @@
 <div class="card chat-card">
   <div class="card-block">
     <div class="row">
-      <div class="col s2 m1 l1">
-        <%= gravatar_for message.user %>
-      </div>
-      <div class="col s10 m4 l4">
+      <div class="col s12 m4 l4" id="style-chat">
         <div class="row">
           <div class="col 12">
             <span class="text-muted"><%= message.user.name %> at <%= message.timestamp %> says</span><br>

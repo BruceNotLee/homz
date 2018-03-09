@@ -7,8 +7,17 @@ div.row{
 #messages {
   height: 50vh;
   width: 88vw;
+  margin-right: 0;
 }
 
-.chat-card {
+// .chat-card {
+//   box-shadow: 10px 10px 23px -2px rgba(0,0,0,0.75);
+//   border-radius: 5px;
+  // background-color: #2D4191;
+// }
+
+#style-chat{
   box-shadow: 10px 10px 23px -2px rgba(0,0,0,0.75);
+  border-radius: 5px;
+  background-color: #84e5ff;
 }
