@@ -1,6 +1,6 @@
 document.addEventListener('turbolinks:load', function() {
 
-  let userId = document.body.getAttribute('data-current-user-id');
+  var userId = document.body.getAttribute('data-current-user-id');
 
 
   App.cable.subscriptions.create(
@@ -18,7 +18,7 @@ document.addEventListener('turbolinks:load', function() {
       received: function(data) {
         // console.log('received');
         console.log(data);
-        let notifier = $('#icon-message').find('i').addClass('red-text')
+        var notifier = $('#icon-message').find('i').addClass('red-text')
         notifier.addClass('red-text')
 
       }
