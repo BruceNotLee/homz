@@ -26,9 +26,15 @@
         </div>
 
         <!-- Schedule a visit -->
+        <% if current_user %>
         <div id="" class="calendar card-header-content stats col s4">
-          <i class="fas fa-calendar-alt"></i> Drop By!
+          <i class="fas fa-calendar-alt datepicker"></i> Drop By!
         </div>
+        <% else %>
+        <div id="" class="calendar card-header-content stats col s4">
+          <i class="fas fa-calendar-alt auth"></i> Drop By!
+        </div>
+        <% end %>
       </div> <!-- end row -->
       <!-- end card HEADER -->
 

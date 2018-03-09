@@ -9,8 +9,9 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
 //= require jquery
+//= require pickadate/picker
+//= require pickadate/picker.date
 //= require rails-ujs
 //= require materialize
 //= require turbolinks
@@ -27,4 +28,9 @@ $(document).on('turbolinks:load', function(){
     $('.modal').modal();
     $('#modal1').modal('open');
   });
+
+
+
+
+
 });
