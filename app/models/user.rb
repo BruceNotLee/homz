@@ -13,6 +13,7 @@ class User < ApplicationRecord
   has_many :pictures, through: :favorites
   has_many :chat_invites
   has_many :chat_room_invites, through: :chat_invites, source: :chat_room
+  has_many :properties
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

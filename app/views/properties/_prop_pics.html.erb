@@ -1,0 +1,25 @@
+
+
+<% pictures.each do |picture| %>
+<div class="row">
+  <div class="col s1">
+    <% if picture.property_id == 0 || picture.property_id.nil? %>
+      <input type="checkbox" class="checkbox" name="<%=picture.id%>" value="<%=picture.id%>" id="<%=picture.id%>">
+      <div class="col s11">
+        <%= image_tag picture.attachment.url(:square)%>
+      </div>
+    <% elsif picture.property_id == property.id %>
+      <input type="checkbox" class="checkbox" name="<%=picture.id%>" value="<%=picture.id%>" id="<%=picture.id%>" checked>
+      <div class="col s11">
+        <%= image_tag picture.attachment.url(:square)%>
+      </div>
+    <% end %>
+  </div>
+</div>
+<% end %>
+
+<div class="row">
+  <div class="col s12 center-align">
+    <a class="waves-effect waves-light btn  blue darken-5" id="conf-pics">Confirm Pictures</a>
+  </div>
+</div>

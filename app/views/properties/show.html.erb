@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <% if current_user.id == @property.user_id %>
+        <%= link_to "Back", properties_path %>
+      <% end %>
+    </div>
+  </div>
+<div class="row">
+  <div class="col s6">
+    <strong>Bed:</strong>
+    <%= @property.bed %>
+  </div>
+
+  <div class="col s6">
+    <strong>Bath:</strong>
+    <%= @property.bath %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s4">
+    <strong>Zip:</strong>
+    <%= @property.zip %>
+  </div>
+  <div class="col s8">
+    <strong>Neighborhood:</strong>
+    <%= @property.neighborhood %>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col s4">
+    <strong>Sqft:</strong>
+    <%= @property.sqft %>
+  </div>
+
+  <div class="col s8">
+    <strong>Price:</strong>
+    <%= @property.price %>
+  </div>
+</div>
+
+<% unless @pictures.nil? || @pictures.empty? %>
+<%= render @pictures %>
+<% end %>
+
+</div>

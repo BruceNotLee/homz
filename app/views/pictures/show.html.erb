@@ -2,6 +2,13 @@
   <%= render @picture %>
   <%= render partial: "pictures/share" %>
 </div>
+<div class="property-link row">
+  <div class="col s12 center-align">    
+  <% if @picture.property %>
+    <%= link_to "See more of this property!", @picture.property %>
+  <% end %>
+  </div>
+</div>
 <div class="comment-block">
   <% @picture.comments.each do |c| %>
   <p>
