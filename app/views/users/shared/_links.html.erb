@@ -1,3 +1,4 @@
+
 <%- if controller_name != 'sessions' %>
   <%#= link_to "Log in", new_session_path(resource_name) %><br />
 <% end -%>
@@ -22,8 +23,8 @@
   <%- if devise_mapping.omniauthable? %>
     <%- resource_class.omniauth_providers.each do |provider| %>
       <%= link_to omniauth_authorize_path(resource_name, provider), class: "f_link" do %>
-      <i class="fa fa-facebook fa-2x" id="f_icon"></i>
-      Log in with Facebook
+      <i class="fab fa-facebook fa-2x" id="f_icon"></i>
+      Sign in with Facebook
       <% end %>
     <% end -%>
   <% end -%>
