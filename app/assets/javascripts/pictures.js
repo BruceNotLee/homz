@@ -5,14 +5,21 @@ $(document).on('turbolinks:load', function(){
 
   // $('#modal1').modal()
   // $('#modal1').modal('open')
-
+  // $('.datepicker').attr("placeholder", "schedule here");
   $('.datepicker').pickadate({
   selectMonths: true, // Creates a dropdown to control month
   selectYears: 15, // Creates a dropdown of 15 years to control year,
   today: 'Today',
   clear: 'Clear',
   close: 'Ok',
-  closeOnSelect: false // Close upon selecting a date,
+  closeOnSelect: true // Close upon selecting a date,
   });
 
+  $('.datepicker').on("change", function(){
+    var select = $(this).val();
+    // alert(select);
+    $(".appointment").append(select);
+    $('.modal').modal();
+    $('#modal2').modal('open');
+  });
 });

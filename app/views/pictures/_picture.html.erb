@@ -27,11 +27,13 @@
 
         <!-- Schedule a visit -->
         <% if current_user %>
-        <div id="" class="calendar card-header-content stats col s4">
-          <i class="fas fa-calendar-alt datepicker"></i> Drop By!
+        <div class="calendar card-header-content stats col s4">
+          Drop By!
+          <i class="fas fa-calendar-alt datepicker"></i>
+          <!-- <input type="date" class="datepicker"> -->
         </div>
         <% else %>
-        <div id="" class="calendar card-header-content stats col s4">
+        <div id="cal" class="calendar card-header-content stats col s4">
           <i class="fas fa-calendar-alt auth"></i> Drop By!
         </div>
         <% end %>
@@ -60,5 +62,11 @@
         Posted <%= time_ago_in_words(picture.created_at) %> ago
       </div>
     </div>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <%= render partial: "pictures/calendar_modal" %>
   </div>
 </div>
