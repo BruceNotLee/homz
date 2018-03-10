@@ -23,7 +23,7 @@
     <% if current_user %>
     <% unless current_user.find_unread_messages.empty? %>
     <span id="icon-message" class="red-text">
-      <%= render partial: 'footer_icons', locals: { path: chat_rooms_path, icon: "fas fa-envelope" } %>
+      <%= render partial: 'footer_icons', locals: { path: chat_rooms_path, icon: "fas fa-envelope red-text" } %>
     </span>
     <% else %>
     <span id="icon-message">
@@ -65,7 +65,7 @@
     <% if current_user %>
     <% unless current_user.find_unread_messages.empty? %>
     <span id="icon-message-desktop" class="red-text">
-      <%= render partial: 'footer_icons', locals: { path: chat_rooms_path, icon: "fas fa-envelope" } %> Messages
+      <%= render partial: 'footer_icons', locals: { path: chat_rooms_path, icon: "fas fa-envelope red-text" } %> Messages
     </span>
     <% else %>
     <span id="icon-message-desktop">

@@ -30,6 +30,7 @@ class PagesController < ApplicationController
   end
 
   def profile
+    # binding.pry
     if current_user
       @users_pictures = Picture.where(user_id: current_user.id)
       @user = current_user
@@ -37,6 +38,7 @@ class PagesController < ApplicationController
     else
       redirect_to new_user_session_path
     end
+    
     @users_pictures = @users_pictures.paginate(page: params[:page], per_page: 10)
   end
 
@@ -49,7 +51,7 @@ class PagesController < ApplicationController
       @pictures = @pictures.paginate(page: params[:page], per_page: 10)
     else
       redirect_to new_user_session_path
-    end    
+    end
   end
 
   def pics
