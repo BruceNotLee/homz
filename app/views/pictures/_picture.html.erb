@@ -60,8 +60,10 @@
     </div>
   </div>
       <!-- Time since post -->
-      <div id="posted-time" class="card-header-content stats col s3">
-        Posted <%= time_ago_in_words(picture.created_at) %> ago
+      <div class="right">
+        <div id="posted-time" class="card-header-content stats col s3">
+          Posted <%= time_ago_in_words(picture.created_at) %> ago
+        </div>
       </div>
 
 </div>
