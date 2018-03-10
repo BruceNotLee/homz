@@ -1,51 +1,70 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
   <div class="row">
-    <div class="col s12">
+    <div class="col s12 property-back">
       <% if current_user.id == @property.user_id %>
         <%= link_to "Back", properties_path %>
       <% end %>
     </div>
   </div>
-<div class="row">
-  <div class="col s6">
-    <strong>Bed:</strong>
-    <%= @property.bed %>
+  <div class="col s3">
+    <!-- gravatar profile image -->
+    <a href="https://gravatar.com/">
+    <%= link_to gravatar_for @property.user, :size => "120", :class => "btn-floating z-depth-3", :id => "property-owner-image" %>
+    </a>
+  </div>
+  <div class="property-details">
+    <!-- row one -->
+    <div class="row">
+      <div class="col s3">
+        <strong>Bed:</strong>
+        <%= @property.bed %>
+      </div>
+
+      <div class="col s5">
+        <strong>Zip:</strong>
+        <%= @property.zip %>
+      </div>
+    </div>
+
+    <!-- row two -->
+    <div class="row">
+      <div class="col s3">
+        <strong>Bath:</strong>
+        <%= @property.bath %>
+      </div>
+      <div class="col s7">
+        <strong>Neighborhood:</strong>
+        <%= @property.neighborhood %>
+      </div>
+    </div>
+
+    <!-- row three -->
+    <div class="row">
+      <div class="col s3">
+        <strong>Sqft:</strong>
+        <%= @property.sqft %>
+      </div>
+
+      <div class="col s5">
+        <strong>Price: $</strong>
+        <%= @property.price %>
+      </div>
+      <div class="col s3 price-sq">
+        <strong> <%= "$/Sqft: $#{(@property.price.to_i/@property.sqft.to_i)}  " %>
+        </strong>
+      </div>
+    </div>
   </div>
 
-  <div class="col s6">
-    <strong>Bath:</strong>
-    <%= @property.bath %>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s4">
-    <strong>Zip:</strong>
-    <%= @property.zip %>
-  </div>
-  <div class="col s8">
-    <strong>Neighborhood:</strong>
-    <%= @property.neighborhood %>
-  </div>
-</div>
 
 
-
-<div class="row">
-  <div class="col s4">
-    <strong>Sqft:</strong>
-    <%= @property.sqft %>
-  </div>
-
-  <div class="col s8">
-    <strong>Price:</strong>
-    <%= @property.price %>
-  </div>
-</div>
-
+<!-- property photos -->
 <% unless @pictures.nil? || @pictures.empty? %>
-<%= render @pictures %>
-<% end %>
-
+<div class="row">
+  <%= render @pictures %>
 </div>
+
+
+<% end %>
+</div> <!-- end container -->
