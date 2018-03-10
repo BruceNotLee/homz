@@ -6,3 +6,33 @@
   opacity: 1 !important;
   pointer-events: all !important;
 }
+
+.property-back {
+  margin-bottom: -10%;
+}
+
+.property-details {
+  font-size: .8rem;
+  line-height: .4rem;
+  padding-left: 0rem;
+  margin-bottom: 32px;
+
+}
+
+.price-sq {
+  white-space: nowrap;
+}
+
+#property-owner-image {
+  width: 16vw;
+  left: 75%;
+  top: 25vh;
+  height: auto;
+  position: sticky;
+  border-radius: 50%;
+  border-color: #fffafa7d;
+  border-width: 1px;
+  border-style: solid;
+  vertical-align: top;
+  margin-top: -5%;
+}
