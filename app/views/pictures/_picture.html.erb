@@ -56,13 +56,14 @@
       <div class="center-align picture-caption">
         <%= picture.caption%>
       </div>
-      <%= render partial: "pictures/tag_chips", locals: {picture: picture} %><br>
+      <%= render partial: "pictures/tag_chips", locals: {picture: picture} %>
+    </div>
+  </div>
       <!-- Time since post -->
       <div id="posted-time" class="card-header-content stats col s3">
         Posted <%= time_ago_in_words(picture.created_at) %> ago
       </div>
-    </div>
-  </div>
+
 </div>
 
 <div id="modal2" class="modal">
