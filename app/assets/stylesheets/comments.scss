@@ -2,15 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .comment{
-  // display: inline-block;
-  // padding-right: 1.5em;
-  // padding-left: 0.9em;
   background-color: #eaecf1;
   border-radius: 5px;
   -webkit-box-shadow: -4px 4px 21px -3px rgba(0,0,0,0.75);
   -moz-box-shadow: -4px 4px 21px -3px rgba(0,0,0,0.75);
   box-shadow: -4px 4px 21px -3px rgba(0,0,0,0.75);
-
 }
 
 .comment-body{
@@ -20,7 +16,8 @@
 }
 
 .name{
-  font-size: 1.2em;
+    font-size: 1.2em;
+    font-weight: bolder;
 }
 
 .time{
