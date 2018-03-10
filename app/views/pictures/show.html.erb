@@ -1,7 +1,13 @@
 <div class="picture-block">
   <%= render @picture %>
 </div>
-
+<div class="property-link row">
+  <div class="col s12 center-align">
+  <% if @picture.property %>
+    <%= link_to "See more of this property!", @picture.property %>
+  <% end %>
+  </div>
+</div>
 <div class="comment-block container">
   <% @picture.comments.each do |c| %>
   <div class="comment">
