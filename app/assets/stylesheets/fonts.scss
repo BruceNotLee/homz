@@ -25,6 +25,8 @@
 html {
   font-family: "Objective-Regular";
   color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .Somatic-Rounded{
