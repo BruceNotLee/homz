@@ -3,9 +3,10 @@
 <div class="row-footer row hide-on-large-only">
   <div class="center">
     <!-- Home -->
-    <span id="icon-home">
-      <%= render partial: 'footer_icons', locals: { path: feed_path, icon: "fas fa-home" } %>
-    </span>
+    <!-- Do not refactor the home icon to include the footer icon partial! We do not want auth on this. -->
+    <%= link_to feed_path, class: "margin-footer transparent btn-floating waves-effect waves-light hoverable z-depth-0 heart", id: "icon-home" do %>
+      <i class="fas fa-home"></i>
+      <% end %>
 
     <!-- Favorites -->
     <span id="icon-favorites">
