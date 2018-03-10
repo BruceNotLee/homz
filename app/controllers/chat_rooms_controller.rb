@@ -19,7 +19,7 @@ class ChatRoomsController < ApplicationController
       # ChatInvite.find(chat_room_id: @chat_room.id, user_id: params[:pic_owner_id])
       ChatInvite.find_or_create_by(chat_room_id: @chat_room.id, user_id: params[:pic_owner_id]) do |ci|
         ci.chat_room_id = @chat_room.id
-        ci.user_id = params[:pic_owner_id]        
+        ci.user_id = params[:pic_owner_id]
       end
       redirect_to @chat_room
     else
@@ -33,6 +33,7 @@ class ChatRoomsController < ApplicationController
 
     current_user.mark_messages_read(@chat_room)
 
+    @user = current_user
     @message = Message.new
   end
 

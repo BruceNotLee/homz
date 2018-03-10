@@ -17,7 +17,7 @@ document.addEventListener('turbolinks:load', function() {
       },
       received: function(data) {
         // console.log('received');
-        console.log(data);
+        // console.log(data);
         var notifier = $('#icon-message').find('i').addClass('red-text')
         notifier.addClass('red-text')
 
