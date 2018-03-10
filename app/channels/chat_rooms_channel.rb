@@ -13,7 +13,7 @@ class ChatRoomsChannel < ApplicationCable::Channel
     if current_user.id == chat_room.user_id
       user = ChatInvite.find_by(chat_room_id: chat_room.id).user
     else
-      user = current_user
+      user = User.find(chat_room.user_id)
     end
     NotificationsChannel.broadcast_to(user, user.find_unread_messages.count)
     head :ok

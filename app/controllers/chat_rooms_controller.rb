@@ -18,8 +18,8 @@ class ChatRoomsController < ApplicationController
     if @chat_room.save
       # ChatInvite.find(chat_room_id: @chat_room.id, user_id: params[:pic_owner_id])
       ChatInvite.find_or_create_by(chat_room_id: @chat_room.id, user_id: params[:pic_owner_id]) do |ci|
-        ci.chat_room_id = @chat_room_id
-        ci.user_id = params[:pic_owner_id]
+        ci.chat_room_id = @chat_room.id
+        ci.user_id = params[:pic_owner_id]        
       end
       redirect_to @chat_room
     else
