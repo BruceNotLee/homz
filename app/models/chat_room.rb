@@ -15,7 +15,8 @@ class ChatRoom < ApplicationRecord
   end
 
   def chat_display_name(user)
-    if user_id == user.id
+    #the chat invite doesn't exist yet, so I can't check to see if there is another person?
+    if self.user_id == user.id
       user = ChatInvite.find_by(chat_room_id: id).user if ChatInvite.find_by(chat_room_id: id)
       "#{user.name} RE: #{title.split('-')[1]}"
     else
