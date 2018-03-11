@@ -14,14 +14,13 @@
     <!-- profile card content -->
     <div id="profile-content" class="card-content s12 center">
       <div class="row">
-        <div id="property-stat" class="stats col s4">
-          Properties <%= @user.properties.count %>
+        <div id="property-count" class="stats col s4"> <%= link_to "Properties #{@user.properties.count}", properties_path %>
         </div>
-        <div id="follower-stat" class="stats col s4">
-          Followers 4
+        <div id="messages-count" class="stats col s4">
+          <%= link_to "Messages #{@user.messages.count}", chat_rooms_path %>
         </div>
-        <div id="likes-stat" class="stats col s4">
-          Likes 40
+        <div id="favorites-count" class="stats col s4">
+           <%= link_to "Favorites #{@user.favorites.count}", my_favorites_path  %>
         </div>
       </div>
     </div>
@@ -63,7 +62,7 @@
           <!-- Pulls the profiles photos -->
           <%= render @users_pictures %>
           <% else %> <!-- if no uploads -->
-            <div class="container center">
+            <div class="container center first-upload">
               <%= link_to "Click here to upload your first photo!", upload_path %>
             </div>
           <% end %>
