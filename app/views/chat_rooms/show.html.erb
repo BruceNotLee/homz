@@ -1,7 +1,7 @@
 <div class="container">
 
 <div class="row">
-    <h5>Chat with <%= @chat_room.chat_display_name(current_user) %></h5>
+    <h5 class="other_guy">Chat with <%= @chat_room.chat_display_name(current_user) %></h5>
 
 
   <div id="messages" data-chat-room-id="<%= @chat_room.id %>">

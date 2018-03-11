@@ -40,3 +40,29 @@ jQuery(document).on('turbolinks:load', function() {
     });
   }
 });
+
+$(document).on('turbolinks:load', function(){
+  var other_guy = $('.other_guy').text().split(" ")[2];
+  color_bubbles = function(){
+    $('#messages div.col.chat-bubble').each(function(index, value){
+      var chat_name = $(this).find($('.name')).text().split(" ")[0];
+      if (chat_name == other_guy){
+        $(this).attr("id",'other-guy-chat');
+      } else{
+      }
+    });
+  };
+
+  color_bubbles();
+  $('#new_message').submit(function(e){
+    $('#messages div.col.chat-bubble').each(function(index, value){
+      var chat_name = $(this).find($('.name')).text().split(" ")[0];
+      if (chat_name == other_guy){
+        $(this).attr("id",'other-guy-chat');
+      } else{
+      }
+    });
+  });
+
+
+});
