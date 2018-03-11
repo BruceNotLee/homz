@@ -15,21 +15,26 @@ $(document).on('turbolinks:load', function(){
   $('.datepicker').on("change", function(){
     var select = $(this).val();
     // alert(select);
-    var apptBody = "An email will be sent to the seller to schedule an appointment for "
-    $(".appointment").text(apptBody + select);
+    var apptBody = "Would you like to schedule an appointment to visit this property on "
+    $(".appointment").text(apptBody + select + "?");
     $('.modal').modal();
     $('#modal2').modal('open');
+
+    $('#yes').click(function(){
+      // $('.modal').modal();
+      $('#modal2').modal('close');
+      var userId = document.body.getAttribute('data-current-user-id');
+      var picOwner = $(this).attr("pic_owner_id")
+      var pictureId = $(this).attr("pic_id")
+      var params = {"pic_owner_id":picOwner, "title":userId+'-'+pictureId+'-visit', "date":select};
+      // "#{current_user.id}-#{picture.id}-visit"
+      $.get('/join_chat.js', params, function(){
+      });
+    });
+
+    $('#no').click(function(){
+      $('#modal2').modal('close');
+    });
   });
-
-  $('#yes').click(function(){
-    // $('.modal').modal();
-    $('#modal2').modal('close');
-  });
-
-  $('#no').click(function(){
-    $('#modal2').modal('close');
-  });
-
-
 
 });
