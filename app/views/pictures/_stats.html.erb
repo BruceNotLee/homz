@@ -11,8 +11,8 @@
     </div>
 
     <!-- favorites -->
-    <div class="likes-stat picture-stats stats col s4">
-      <%= pluralize(picture.favorites.count, 'Favorite') %>
+    <div class="likes-stat picture-stats stats col s4 loves">
+      <%= render partial: "/favorites/count_loves", locals: { picture: picture } %>
     </div><!-- end row -->
   </div>
 </div>

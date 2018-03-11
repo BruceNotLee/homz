@@ -1,1 +1,2 @@
 $('div#<%= dom_id(@picture) %>').html('<%= j render partial: "button2", locals: {picture: @picture} %>');
+$('.loves').html('<%= j render partial: "favorites/count_loves", locals: {picture: @picture} %>');
