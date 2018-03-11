@@ -1,5 +1,5 @@
-#profile-header-image {
-
+div#profile-header-image.card-image {
+  margin-top: -5vh;
 }
 
 #login {
@@ -29,4 +29,8 @@ border-style: solid;
 
 #profile-content {
   padding: 1vh 1vw;
+}
+
+div.row.profile {
+  margin: 0;
 }

@@ -1,61 +1,52 @@
-<div id="profile-page-header">
-  <div class="row">
-    <div class="col s12">
-      <div class="card">
+<div id="profile-page-header" class="row col s12">
+  <div class="card s12">
+    <!-- background image -->
+    <div id="profile-header-image" class="card-image">
+      <img src="assets/milky_way.jpg">
+      <!-- profile title -->
+      <span id="profile-title" class="right white-text"> <%= @user.name %> </span>
+      <!-- gravatar profile image -->
+      <a href="https://gravatar.com/">
+      <%= link_to gravatar_for @user, :size => "300", :class => "btn-floating, btn-large, halfway-fab", :id => "profile-image" %>
+      </a>
+    </div> <!-- end background image -->
 
-        <!-- background image -->
-        <div id="profile-header-image" class="card-image">
-          <img src="assets/milky_way.jpg">
-
-          <!-- profile title -->
-          <span id="profile-title" class="right white-text"> <%= @user.name %> </span>
-
-            <!-- gravatar profile image -->
-            <a href="https://gravatar.com/">
-            <%= link_to gravatar_for @user, :size => "300", :class => "btn-floating, btn-large, halfway-fab", :id => "profile-image" %>
-            </a>
-            <!-- add https://gravatar.com/ link if default -->
-
-        </div> <!-- end background image -->
-
-        <!-- profile card content -->
-        <div id="profile-content" class="card-content">
-          <div class="center">
-            <div class="row">
-              <div id="property-stat" class="stats col s4">
-                Properties 1
-              </div>
-              <div id="follower-stat" class="stats col s4">
-                Followers 4
-              </div>
-              <div id="likes-stat" class="stats col s4">
-                Likes 40
-              </div>
-            </div>
-          </div>
+    <!-- profile card content -->
+    <div id="profile-content" class="card-content s12 center">
+      <div class="row">
+        <div id="property-stat" class="stats col s4">
+          Properties <%= @user.properties.count %>
         </div>
-
-          <!-- login items -->
-
-          <div id="login" class="">
-            <div class="row">
-            <div class="actions col s6 ">
-            <%= render 'users/login_items' %>
-            </div>
-            <div class="col s6 right-align">
-              <%= link_to "My Properties", properties_path %>
-            </div>
-            </div>
-            <div class="actions">
-              <%= link_to "Edit Profile", edit_user_registration_path %>
-            </div>
-          </div>
-
+        <div id="follower-stat" class="stats col s4">
+          Followers 4
         </div>
-        <!-- End profile card content -->
-
+        <div id="likes-stat" class="stats col s4">
+          Likes 40
+        </div>
       </div>
     </div>
+
+      <!-- login items -->
+
+      <div id="login" class="row center s12">
+        <div class="col s6 left-align profile">
+          <div class="row profile">
+            <%= render 'users/login_items' %>
+          </div>
+          <div class="row profile">
+            <%= link_to "Edit Profile", edit_user_registration_path %>
+          </div>
+        </div> <!-- End left column -->
+        <div class="col s6 right-align profile">
+          <div class="row profile">
+            <%= link_to "My Properties", properties_path %>
+          </div>
+          <div class="row profile">
+            <a href="//www.iubenda.com/privacy-policy/46565296" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+          </div>
+        </div> <!-- End right column -->
+      </div>
+    </div><!-- End profile card content -->
   </div>
 </div>
 
@@ -71,11 +62,11 @@
 
           <!-- Pulls the profiles photos -->
           <%= render @users_pictures %>
-          <% else -%>
-
-          <!-- if no images then display -->
-          <%= "<p>Submit your first photo to see them populated here. ADD Upload button large here!</p>".html_safe %>
-          <% end -%>
+          <% else %> <!-- if no uploads -->
+            <div class="container center">
+              <%= link_to "Click here to upload your first photo!", upload_path %>
+            </div>
+          <% end %>
         </div>
 
         <!-- pull new photos on scroll -->
@@ -86,6 +77,3 @@
     </div>
   </div>
 </div>
-
-
-<a href="//www.iubenda.com/privacy-policy/46565296" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
