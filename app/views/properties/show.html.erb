@@ -33,8 +33,11 @@
         <strong>Bath:</strong>
         <%= @property.bath %>
       </div>
+
       <div class="col s7">
-        <strong>Neighborhood:</strong>
+        <div class="pad-b">
+          <strong>Neighborhood:</strong>
+        </div>
         <%= @property.neighborhood %>
       </div>
     </div>
@@ -42,14 +45,19 @@
     <!-- row three -->
     <div class="row">
       <div class="col s3">
-        <strong>Sqft:</strong>
+        <div class="pad-b">
+          <strong>Sqft:</strong>
+        </div>
         <%= @property.sqft %>
       </div>
 
       <div class="col s5">
-        <strong>Price: $</strong>
+        <div class="pad-b">
+          <strong>Price:</strong>
+        </div>
         <%= @property.price %>
       </div>
+      
       <div class="col s3 price-sq">
         <strong> <%= "$/Sqft: $#{(@property.price.to_i/@property.sqft.to_i)}  " %>
         </strong>
