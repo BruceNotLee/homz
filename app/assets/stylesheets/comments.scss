@@ -8,7 +8,7 @@
   -moz-box-shadow: -4px 4px 21px -3px rgba(0,0,0,0.75);
   box-shadow: -4px 4px 21px -3px rgba(0,0,0,0.75);
   display: inline-block;
-
+  margin-top: 1.5em
 }
 
 .comment-body{
@@ -19,11 +19,12 @@
 
 .name{
     font-size: 1.2em;
+    margin-bottom: -0.5em;
 }
 
 .time{
   padding-left: 2em;
   font-size: 0.8em;
   margin-top: -0.4em;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
 }
