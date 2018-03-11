@@ -41,7 +41,7 @@
       <!-- end card HEADER -->
 
       <!-- get image -->
-      <%= link_to image_tag(picture.attachment.url(:medium), class: 'feed-responsive-img'), "/pictures/#{picture.id}" %>
+      <%= link_to image_tag(picture.attachment.url(:medium), class: 'feed-responsive-img', owner_id: picture.user_id), "/pictures/#{picture.id}" %>
       <!-- end image -->
 
       <!-- favorite button -->
@@ -68,6 +68,6 @@
 
 <div id="modal2" class="modal">
   <div class="modal-content">
-    <%= render partial: "pictures/calendar_modal" %>
+    <%= render partial: "pictures/calendar_modal", locals: {picture: picture} %>
   </div>
 </div>

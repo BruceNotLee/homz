@@ -1,6 +1,8 @@
 <h2 class="center">Log in</h2>
 
 <%= form_for resource, url: session_path(:user), remote: true do |f| %>
+<%= devise_error_messages! %>
+
   <div class="field">
     <%#= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
