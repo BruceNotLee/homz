@@ -58,13 +58,34 @@ $(document).on('turbolinks:load', function(){
     });
   };
 
-  var callback = function(mutationsList) {
-    for(var mutation of mutationsList) {
+  var callback = function callback(mutationsList) {
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = mutationsList[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var mutation = _step.value;
+
       if (mutation.type == 'childList') {
-          color_bubbles();
+        color_bubbles();
       }
     }
-  };
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+};
 
   // Create an observer instance linked to the callback function
   var observer = new MutationObserver(callback);
