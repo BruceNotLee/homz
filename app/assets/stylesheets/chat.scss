@@ -10,21 +10,28 @@ div.row{
   margin-right: 0;
 }
 
-// .chat-card {
-//   box-shadow: 10px 10px 23px -2px rgba(0,0,0,0.75);
-//   border-radius: 5px;
-  // background-color: #2D4191;
-// }
+.chat-image{
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}
 
 #style-chat{
-  box-shadow: 10px 10px 23px -2px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -4px 4px 21px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: -4px 4px 21px -3px rgba(0,0,0,0.75);
+  box-shadow: -4px 4px 21px -3px rgba(0,0,0,0.75);
   border-radius: 5px;
   background-color: #84e5ff;
+  margin-left: 2vw;
 }
 
 #other-guy-chat{
-  box-shadow: 10px 10px 23px -2px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -4px 4px 21px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: -4px 4px 21px -3px rgba(0,0,0,0.75);
+  box-shadow: 4px 4px 21px -3px rgba(0,0,0,0.75);
   border-radius: 5px;
   background-color: #b8b7b7;
   // text-align: right;
+  float: right;
+  margin-right: 2vw;
 }
