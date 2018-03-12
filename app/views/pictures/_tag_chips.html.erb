@@ -6,7 +6,7 @@
 <% @tags.each do |tag| %>
 
   <% unless filter.include?(tag)  %>
-    <div class="chip regular-blue white-text z-depth-3">
+    <div class="chip white-text z-depth-3">
       <%= "##{tag}" %>
       <% i+=1 %>
     </div>

@@ -1,68 +1,92 @@
 <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 <div class="col s12 l6 xl4">
   <div class="card hoverable">
+    <!-- Card Image -->
     <div class="card-image">
-
-      <!-- card HEADER -->
-      <div class="row center card-header-content">
-
-        <!-- message owner -->
-        <div class="card-header-content stats col s1 right chat">
-          <% if current_user %>
-            <%= link_to join_chat_path(title: "#{current_user.id}-#{picture.id}-chat", pic_owner_id: picture.user_id) do %>
-            <i class="fas fa-comments"></i>
-          <% end %>
-            <% else %>
-              <%= link_to new_user_session_path, remote: true do %>
-              <i class="fas fa-comments auth"></i>
-            <% end %>
-          <% end %>
-        </div>
-        <!-- end message owner -->
-
-        <!-- Picture Owner -->
-        <div id="" class="card-header-content stats col s7 poster-name right">
-          <%= render partial: 'pictures/pic_owner', locals: {picture: picture} %>
-        </div>
-
-        <!-- Schedule a visit -->
-        <% if current_user %>
-        <div class="calendar card-header-content stats col s4">
-          Drop By!
-          <i class="fas fa-calendar-alt datepicker"></i>
-          <!-- <input type="date" class="datepicker"> -->
-        </div>
-        <% else %>
-        <div id="cal" class="calendar card-header-content stats col s4">
-          <i class="fas fa-calendar-alt auth"></i> Drop By!
-        </div>
-        <% end %>
-      </div> <!-- end row -->
-      <!-- end card HEADER -->
-
-      <!-- get image -->
+      <!-- Image -->
       <%= link_to image_tag(picture.attachment.url(:medium), class: 'feed-responsive-img', owner_id: picture.user_id), "/pictures/#{picture.id}" %>
-      <!-- end image -->
+      <div class="chips">
+        <%= render partial: "pictures/tag_chips", locals: {picture: picture} %>
+      </div>
 
-      <!-- favorite button -->
-      <%= div_for picture do %>
-      <%= render partial: "favorites/button2", locals: { picture: picture } %>
-      <% end %>
-      <!-- end favorite button -->
+      <!-- Image -->
 
-    </div> <!-- end card-image -->
+    </div><!-- Card Image -->
+    <!-- Card Content -->
     <div class="card-content card-bottom">
-      <%= render partial: "pictures/stats", locals: {picture: picture} %>
-      <div class="left-align picture-caption">
-        <%= picture.caption%>
+      <!-- First Row -->
+      <div class="row">
+        <div class="col s5 left icons">
+          <!-- Icons -->
+          <!-- Message -->
+          <div class="col s4 icon">
+            <% if current_user %>
+              <%= link_to join_chat_path(title: "#{current_user.id}-#{picture.id}-chat", pic_owner_id: picture.user_id) do %>
+              <i class="fas fa-comments"></i>
+            <% end %>
+              <% else %>
+                <%= link_to new_user_session_path, remote: true do %>
+                <i class="fas fa-comments auth"></i>
+              <% end %>
+            <% end %>
+          </div><!-- Message -->
+          <!-- Schedule -->
+          <div class="col s4 icon">
+            <% if current_user %>
+              <i class="fas fa-calendar-alt datepicker"></i>
+            <% else %>
+              <i class="fas fa-calendar-alt auth"></i>
+            <% end %>
+          </div><!-- Schedule -->
+          <!-- Favorite -->
+          <div class="col s4 icon">
+            <!-- favorite button -->
+            <%= div_for picture do %>
+            <%= render partial: "favorites/button2", locals: { picture: picture } %>
+            <% end %>
+            <!-- favorite button -->
+          </div><!-- Favorite -->
+          <!-- Icons -->
+        </div>
+        <div class="col s7 right top">
+          <!-- Username -->
+          <div class="poster-name">
+            <%= render partial: 'pictures/pic_owner', locals: {picture: picture} %>
+          </div><!-- Username -->
+        </div>
       </div>
 
-      <%= render partial: "pictures/tag_chips", locals: {picture: picture} %><br>
-      <!-- Time since post -->
-      <div id="posted-time" class="card-header-content stats col s3">
-        Posted <%= time_ago_in_words(picture.created_at) %> ago
+      <!-- Second Row -->
+      <div class="row">
+        <div class="col s10 left">
+          <!-- stats -->
+          <%= render partial: "pictures/stats", locals: {picture: picture} %><!-- stats -->
+        </div>
+        <div class="col s4 right">
+          <!-- blank -->
+        </div>
       </div>
-    </div>
+
+      <!-- Third Row -->
+      <div class="row">
+        <div class="col s8 left">
+          <!-- caption -->
+          <div class="left-align picture-caption">
+            <%= picture.caption%>
+          </div>
+          <!-- caption -->
+        </div>
+      </div>
+
+      <!-- row 4 -->
+      <div class="row">
+        <!-- Time Ago -->
+        <div id="posted-time" class="stats col right">
+          <%= time_ago_in_words(picture.created_at) %> ago
+        </div>
+        <!-- Time Ago -->
+      </div>
+    </div><!-- Card Content -->
   </div>
 </div>
 

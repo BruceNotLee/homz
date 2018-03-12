@@ -1,18 +1,5 @@
-<div id="" class="stat-content card-content">
-  <div class="row center">
-    <!-- share/share count -->
-    <div class="share-stat picture-stats stats col s4">
-      <%= render partial: "pictures/share" %>
-    </div>
-
-    <!-- Comments -->
-    <div class="comment-stat picture-stats stats col s4">
-      <%= link_to pluralize(picture.comments.count, 'Comment'), "/pictures/#{picture.id}" %>
-    </div>
-
-    <!-- favorites -->
-    <div class="likes-stat picture-stats stats col s4">
-      <%= pluralize(picture.favorites.count, 'Favorite') %>
-    </div><!-- end row -->
-  </div>
+<div class="card-content">
+  <%= render partial: "pictures/share" %>
+  <%= link_to pluralize(picture.comments.count, 'Comment'), "/pictures/#{picture.id}" %>
+  <%= pluralize(picture.favorites.count, 'Love') %>
 </div>
