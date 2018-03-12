@@ -12,7 +12,10 @@ house6 = [*(50..54)]
 house6info = {location: "33138", caption: "Miami Shores - 2/2 - 1524 sqft - $750 K", user_id: 6}
 
 zips = [33138,33140,33150]
+
+
 if User.count < 6
+  User.create(email: 'jlandry14mia@gmail.com',password:"password",password_confirmation:"password",location:'33138')
   6.times do
     User.create(email: Faker::Internet.safe_email, password:'password',password_confirmation:'password', location: zips.sample)
   end
