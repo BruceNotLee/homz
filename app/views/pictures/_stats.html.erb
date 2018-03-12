@@ -1,5 +1,5 @@
 <div class="card-content">
-  <%= render partial: "pictures/share" %>
+  <%= render partial: "pictures/share", locals: { picture: picture } %>
   <%= link_to pluralize(picture.comments.count, 'Comment'), "/pictures/#{picture.id}" %>
   <div class="loves">
     <%= render partial: "/favorites/count_loves", locals: { picture: picture } %>
