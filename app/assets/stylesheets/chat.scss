@@ -12,8 +12,10 @@ div.row{
 
 .chat-image{
   border-radius: 50%;
-  width: 100%;
-  height: auto;
+  object-fit: cover;
+  width: 75px;
+  height: 75px;
+  // height: auto;
 }
 
 #style-chat{

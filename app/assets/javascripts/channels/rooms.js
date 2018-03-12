@@ -70,7 +70,9 @@ $(document).on('turbolinks:load', function(){
   var observer = new MutationObserver(callback);
 
   // Start observing the target node for configured mutations
-  observer.observe(targetNode, config);
+  if (targetNode) {
+    observer.observe(targetNode, config);
+  }
 
   color_bubbles();
 

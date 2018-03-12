@@ -1,20 +1,20 @@
 <% picture =  Picture.find(chat_room.chat_display_name(current_user).split[-1]) %>
 
-<div class="row">
+<div class="row valign-wrapper">
   <% unless chat_room.unread_msgs(current_user).empty? %>
-    <div class="col s4">
+    <div class="col s3">
       <%= image_tag picture.attachment.url(:thumb), class: "chat-image" %>
     </div>
-    <div class="col s8">
-      <%= link_to chat_room.chat_display_name(current_user), chat_room_path(chat_room) %>
+    <div class="col s10">
+      <%= link_to chat_room.chat_display_name(current_user).split(" ")[0], chat_room_path(chat_room) %>
       <%=pluralize chat_room.unread_msgs(current_user).count,"new message","new messages"%>
     </div>
   <% else %>
-    <div class="col s4">
+    <div class="col s3">
       <%= image_tag picture.attachment.url(:thumb), class: "chat-image" %>
     </div>
-    <div class="col s8">
-      <%= link_to chat_room.chat_display_name(current_user), chat_room_path(chat_room) %></li>
-  </div>
-<% end %>
+    <div class="col s10">
+      <%= link_to chat_room.chat_display_name(current_user).split(" ")[0], chat_room_path(chat_room) %></li>
+    </div>
+  <% end %>
 </div>
