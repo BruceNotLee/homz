@@ -1,9 +1,12 @@
 <% if current_user %>
   <% if current_user.favorite?(picture) %>
     <%= link_to(image_tag("like.png"), unfavorite_path(id: picture.id), class:"transparent darken-3 btn-small btn-floating z-depth-0 heart", method: :delete, remote: true)%>
+    <%#= picture.favorites.count %>
   <% else %>
     <%= link_to(image_tag("dislike_blue.png"), favorite_path(id: picture.id), class:"transparent darken-3 btn-small btn-floating z-depth-0 heart", method: :post, remote: true)%>
+    <%#= picture.favorites.count %>
   <% end %>
 <% else %>
   <%= link_to(image_tag("dislike_blue.png"), new_user_session_path, class:"transparent btn-small btn-floating z-depth-0 heart auth", remote: true)%>
+  <%#= picture.favorites.count %>
 <% end %>

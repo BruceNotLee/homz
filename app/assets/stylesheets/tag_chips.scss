@@ -6,14 +6,15 @@
 
 div.chip {
   background-color: #00000057;
-  
+  border-radius: 5px;
 
 }
 
 div.chips {
   margin-top: -2.5em;
-    z-index: 0;
-    position: absolute;
+  z-index: 0;
+  position: absolute;
+  display: inline-flex;
 }
 
 img.feed-responsive-img {
