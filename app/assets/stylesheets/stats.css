@@ -1,8 +1,10 @@
 .stats {
   width: auto;
-  font-size: 12px;
+  font-size: 15px;
   font-family: "Objective-Thin";
   white-space: nowrap;
+  padding-left: 1%;
+  padding-right: 1%;
   /* padding: 1vh !important; */
 }
 
@@ -10,10 +12,7 @@
   padding: 1vh 1vw;
 }
 
-.property-stat {}
-
-.follower-stat {}
-
-.likes-stat {}
-
-.comment-stat {}
+div.card-content {
+  font-size: 15px !important;
+  padding: 1px 5px !important;
+}
