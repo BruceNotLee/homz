@@ -16,3 +16,7 @@ div.card-content {
   font-size: 15px !important;
   padding: 1px 5px !important;
 }
+
+div.loves{
+  display: inline;
+}
