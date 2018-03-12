@@ -1,7 +1,6 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
-
-  layout "app_no_container"
+  layout :resolve_layout
 
   # GET /pictures
   # GET /pictures.json
@@ -84,6 +83,15 @@ class PicturesController < ApplicationController
   end
 
   private
+
+  def resolve_layout
+    case action_name
+    when "new"
+      "app_no_container_no_flow"
+    else
+      "app_no_container"
+    end
+  end
 
 
     # Use callbacks to share common setup or constraints between actions.
