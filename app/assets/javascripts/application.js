@@ -18,6 +18,7 @@
 //= require cable
 //= require_tree .
 $(document).on('turbolinks:load', function(){
+  console.log('turboload');
   // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
 
   // $('#modal1').modal()
@@ -28,6 +29,4 @@ $(document).on('turbolinks:load', function(){
     $('.modal').modal();
     $('#modal1').modal('open');
   });
-
-
 });
