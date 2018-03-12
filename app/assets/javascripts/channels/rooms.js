@@ -44,29 +44,10 @@ $(document).on('turbolinks:load', function() {
 $(document).on('turbolinks:load', function(){
   var other_guy = $('.other_guy').text().split(" ")[2];
   var $messages = $('#messages');
-
-  //   // Select the node that will be observed for mutations
-  // var $targetNode = $('#messages');
-  //
-  // // Options for the observer (which mutations to observe)
-  // var config = { attributes: true, childList: true };
-  //
-  //   var callback = function(mutationsList) {
-  //     for(var mutation of mutationsList) {
-  //         if (mutation.type == 'childList') {
-  //             console.log('A child node has been added or removed.');
-  //         }
-  //         else if (mutation.type == 'attributes') {
-  //             console.log('The ' + mutation.attributeName + ' attribute was modified.');
-  //         }
-  //     }
-  // };
-  //
-  // // Create an observer instance linked to the callback function
-  // var observer = new MutationObserver(callback);
-  //
-  // // Start observing the target node for configured mutations
-  // observer.observe(targetNode, config);
+  // Select the node that will be observed for mutations
+  var targetNode = document.getElementById('messages');
+  // Options for the observer (which mutations to observe)
+  var config = {childList: true };
 
   color_bubbles = function(){
     $('#messages div.col.chat-bubble').each(function(index, value){
@@ -76,6 +57,22 @@ $(document).on('turbolinks:load', function(){
       }
     });
   };
+
+  var callback = function(mutationsList) {
+    for(var mutation of mutationsList) {
+      if (mutation.type == 'childList') {
+          color_bubbles();
+      }
+    }
+  };
+
+  // Create an observer instance linked to the callback function
+  var observer = new MutationObserver(callback);
+
+  // Start observing the target node for configured mutations
+  if (targetNode) {
+    observer.observe(targetNode, config);
+  }
 
   color_bubbles();
 
