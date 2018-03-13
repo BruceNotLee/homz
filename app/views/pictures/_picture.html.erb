@@ -4,7 +4,7 @@
     <!-- Card Image -->
     <div class="card-image">
       <!-- Image -->
-      <%= link_to image_tag(picture.attachment.url, class: 'feed-responsive-img', owner_id: picture.user_id), "/pictures/#{picture.id}" %>
+      <%= link_to image_tag(picture.attachment.url(:large), class: 'feed-responsive-img', owner_id: picture.user_id), "/pictures/#{picture.id}" %>
       <div class="chips">
         <%= render partial: "pictures/tag_chips", locals: {picture: picture} %>
       </div>

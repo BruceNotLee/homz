@@ -3,11 +3,11 @@ house1info = {location: "33138", caption: "Miami Shores - 4/5.5 - 3000 sqft - $1
 house2 = [*(7..29)]
 house2info = {location: "33140", caption: "Miami Beach - 4/3 - 2550 sqft - $2,550 K", user_id: 2}
 house3 = [*(30..38)]
-house3info = {location: "33138", caption: "Miami Shores - 4/3 - 2884 sqft - $1,350 K", user_id: 3}
+house3info = {location: "33139", caption: "Miami Shores - 4/3 - 2884 sqft - $1,350 K", user_id: 3}
 house4 = %w[39 40 41]
 house4info = {location: "33150", caption: "Miami Shores - 3/2 - 1995 sqft - $499 K", user_id: 4}
 house5 = [*(42..49)]
-house5info = {location: "33138", caption: "Miami Shores - 3/2 - 2241 sqft - $680 K", user_id: 5}
+house5info = {location: "33139", caption: "Miami Shores - 3/2 - 2241 sqft - $680 K", user_id: 5}
 house6 = [*(50..54)]
 house6info = {location: "33138", caption: "Miami Shores - 2/2 - 1524 sqft - $750 K", user_id: 6}
 
@@ -15,7 +15,7 @@ zips = [33138,33140,33150]
 
 
 if User.count < 6
-  User.create(email: 'jlandry14mia@gmail.com',password:"password",password_confirmation:"password",location:'33138')
+  p "jlandry" if User.create(email: 'jlandry14mia@gmail.com',password:"password",password_confirmation:"password",location:'33138')
   6.times do
     User.create(email: Faker::Internet.safe_email, password:'password',password_confirmation:'password', location: zips.sample)
   end
